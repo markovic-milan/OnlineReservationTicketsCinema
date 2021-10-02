@@ -1,18 +1,9 @@
 module.exports = (sequelize, DataTypes) =>{
-<<<<<<< HEAD
 
     const Filmovi = sequelize.define("Filmovi",{
         naslov: {
             type: DataTypes.STRING,
             allowNull: false,
-=======
-
-    const Filmovi = sequelize.define("Filmovi",{
-
-        naslov:{
-            type:DataTypes.STRING,
-            allowNull:false,
->>>>>>> 41fd4decb7b24a9000db16fe844569703211c542
         },
         opis:{
             type:DataTypes.STRING,
@@ -20,7 +11,6 @@ module.exports = (sequelize, DataTypes) =>{
         },
         vrijemePrikaza:
         {
-<<<<<<< HEAD
             type: DataTypes.STRING, 
             allowNull: false
         },
@@ -36,6 +26,7 @@ module.exports = (sequelize, DataTypes) =>{
         freezeTableName: true
     });
     return Filmovi;
+<<<<<<< HEAD
 =======
             type:DataTypes.STRING, 
             allowNull:false
@@ -51,4 +42,6 @@ module.exports = (sequelize, DataTypes) =>{
     return Filmovi
 
 >>>>>>> 41fd4decb7b24a9000db16fe844569703211c542
+=======
+>>>>>>> origin/homepage
 }

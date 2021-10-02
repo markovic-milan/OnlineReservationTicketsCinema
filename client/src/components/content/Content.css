@@ -7,11 +7,11 @@
     padding-top: 60px;
     padding-right: 50px;
     padding-left: 50px;
+    background: none;
 }
 
 h1{
     width: 100%;
-    color: rgb(187, 183, 224); 
     margin: 10px;
 }
 
