@@ -17,6 +17,11 @@ module.exports = (sequelize, DataTypes) =>{
         },
 
 
+    },{
+        timestamps: false,
+        paranoid: true,
+        underscored: true,
+        freezeTableName: true
     })
     return Filmovi
 
