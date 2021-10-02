@@ -1,8 +1,9 @@
 const express = require('express')
 const app = express();
-
 const db = require('./models');
-
+app.use(express.json());
+const cors = require('cors');
+app.use(cors());
 //Rute
 const filmRouter = require('./routes/Filmovi');
 app.use("/filmovi", filmRouter)
@@ -12,7 +13,6 @@ app.use("/sale", saleRouter)
 
 const korisniciRouter = require('./routes/Korisnici');
 app.use("/korisnici", korisniciRouter)
-
 
 db.sequelize.sync().then(()=>{
 app.listen(3001, ()=>{
