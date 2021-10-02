@@ -1,6 +1,6 @@
-module.exports = (sequalize, DataTypes) =>{
+module.exports = (sequelize, DataTypes) =>{
 
-    const Sale = sequalize.define("Sale",{
+    const Sale = sequelize.define("Sale",{
 
         naslov: {
             type: DataTypes.STRING,
