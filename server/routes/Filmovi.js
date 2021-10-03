@@ -3,6 +3,7 @@ const router = express.Router();
 const {Filmovi} = require('../models')
 
 
+
 router.get('/', async(req, res)=>{
    const listaFilmova = await Filmovi.findAll();
    res.json(listaFilmova);

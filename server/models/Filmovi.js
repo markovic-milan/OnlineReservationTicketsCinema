@@ -1,6 +1,5 @@
 module.exports = (sequelize, DataTypes) =>{
 
-
     const Filmovi = sequelize.define("Filmovi",{
         naslov: {
             type: DataTypes.STRING,
@@ -9,7 +8,7 @@ module.exports = (sequelize, DataTypes) =>{
             underscored: true,
             freezeTableName: true,
 
-        },
+ },
         opis:{
             type:DataTypes.STRING,
             allowNull:false,
@@ -19,8 +18,7 @@ module.exports = (sequelize, DataTypes) =>{
         },
         vrijemePrikaza:
         {
-
-            type: DataTypes.STRING, 
+       type: DataTypes.STRING, 
             allowNull: false,
             paranoid: true,
             underscored: true,
@@ -41,5 +39,4 @@ module.exports = (sequelize, DataTypes) =>{
         freezeTableName: true
     });
     return Filmovi;
-
 }
