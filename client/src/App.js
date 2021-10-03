@@ -6,11 +6,13 @@ import Sale from './screens/Sale';
 import Content from './components/content/Content';
 import Prijava from './screens/Prijava';
 import Registracija from './screens/Registracija'
-function App() {
+import BottomNav from './components/BottomNav/BottomNav';
 
+function App() {
   return <div className="layout">
     
     <Router>
+      
       <Navbar></Navbar>
       <Switch>
         <Route path="/pocetna" exact component={Pocetna}/>
@@ -18,7 +20,13 @@ function App() {
         <Route path="/prijava" exact component={Prijava}/>
         <Route path="/registracija" exact component={Registracija}/>
         <Route path="/sale" exact component={Sale}/>
+
+        
       </Switch>
+      
+      
+      <div className="spacer"></div>
+      <BottomNav></BottomNav>
     </Router>
   </div>;
 }

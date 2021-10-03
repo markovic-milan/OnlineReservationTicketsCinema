@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from "axios";
 import { useEffect, useState } from "react";
-import fotelja from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/vip.jpg"
-import love from"C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/regularSeats.jpg"
-import regular from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/fotelje.jpg"
-import vip from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/loveSeats.jpg"
+import fotelja from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/4.jpg"
+import love from"C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/3.jpg"
+import regular from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/1.jpg"
+import vip from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/2.jpg"
 
 
 
