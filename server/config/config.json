@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "cinema",
+    "password": "bubica",
+    "database": "podacik",
     "host": "localhost",
     "dialect": "mysql"
   },
