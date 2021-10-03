@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from "axios";
+import 'C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/components/seats/Seats.css';
+
 import { useEffect, useState } from "react";
 import fotelja from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/4.jpg"
 import love from"C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/3.jpg"
