@@ -1,24 +1,29 @@
 import React from "react";
 import './Movie.css';
 import slika from './download.jpg';
+import { Link } from 'react-router-dom';
 
 const Movie = (props) =>{
+    console.log("Movie");
     console.log(props.movie.slikaURL);
+    var o = {
+        pathname: "/details",
+        param: props.movie
+    }
+
     return <div className="movie-container">
-        <div className="movie-wrapper">
             <div className="movie-img-container">
                 <img src={slika} alt="slika"></img>
             </div>
-            <div className="movie-info-container">
+            <div className="movie-title-container">
                 <h3>{props.movie.naslov}</h3>
             </div>
-            <div className="movie-info-container">
+            <div className="movie-time-container">
                 <h3>{props.movie.vrijemePrikaza}</h3>
             </div>
             <div className="movie-button-container">
-                <button>Rezerviši</button>
+                <Link to={o}>Rezervisi</Link>
             </div> 
-        </div>
     </div>
 }
 

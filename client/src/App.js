@@ -6,21 +6,22 @@ import Sale from './screens/Sale';
 import Content from './components/content/Content';
 import Prijava from './screens/Prijava';
 import Registracija from './screens/Registracija'
+import Detalji from './screens/Detalji';
 function App() {
 
-  return <div className="layout">
-    
-    <Router>
-      <Navbar></Navbar>
-      <Switch>
-        <Route path="/pocetna" exact component={Pocetna}/>
-        <Route path="/" exact component={Pocetna}/>
-        <Route path="/prijava" exact component={Prijava}/>
-        <Route path="/registracija" exact component={Registracija}/>
-        <Route path="/sale" exact component={Sale}/>
-      </Switch>
+  return <Router> 
+      <div className="layout">
+        <Navbar/>
+        <Switch>
+          <Route path="/pocetna" exact component={Pocetna}/>
+          <Route path="/" exact component={Pocetna}/>
+          <Route path="/prijava" exact component={Prijava}/>
+          <Route path="/registracija" exact component={Registracija}/>
+          <Route path="/sale" exact component={Sale}/>
+          <Route path="/details" exact component={Detalji}/>
+        </Switch>
+      </div>;
     </Router>
-  </div>;
 }
 
 export default App;
