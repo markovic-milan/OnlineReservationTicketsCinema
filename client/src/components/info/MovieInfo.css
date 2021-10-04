@@ -1,0 +1,171 @@
+.movie-reservation-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-image: url('./kino3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;  
+    overflow: auto;
+}
+
+.transparent-background{
+    border-radius: 2em;
+    padding: 2rem;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    background: rgba(121, 121, 121, 0.25);
+}
+
+.movie-info-container{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    width: 100%;
+}
+
+.movie-img{
+    float: left;
+    margin-right: 2rem;
+}
+
+.movie-img img{
+    border-radius: 1em;
+    height: 100%;
+}
+
+.movie-text{
+    width: 100%;
+    padding: 1em;
+    background: rgba(56, 54, 54, 0.5);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.reservation-container{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation-form{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 3rem;
+}
+
+.seats{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.screen{
+    display: flex;
+    font-style: italic;
+    font-weight: 900;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 5px rgb(211, 211, 211);
+}
+.grid-container{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.grid-item > button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    background: rgb(168, 144, 144);
+}
+form{
+    width: 50%;
+}
+label{
+    display: block;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+.reservation-form * {
+    margin: 5px;
+    border-radius: 5px;
+}
+.reservation-form select, .input-seat{
+    width: 100%;
+    height: 2em;
+    background: rgb(255, 255, 255);
+}
+.input-seat{
+    display: block;
+}
+.button-submit {
+    background: #2bf8ff;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    height: 3em;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: 900;
+}
+.prostor{
+    height: 3em;
+}
+.horizontal-fill{
+    height: 3px;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 3px 1px grey;
+}
+@media only screen and (max-width: 1010px) {
+    .reservation-container{
+        flex-direction: column;
+    }
+    .reservation-form{
+        padding-left: 0;
+    }
+    .movie-info-container{
+        flex-direction: column;
+
+    }
+    .movie-text{
+        width: 95%;
+        margin-top: 2em;
+    }
+}
