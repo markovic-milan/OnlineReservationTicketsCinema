@@ -19,7 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
+        }
+    }, {
+        paranoid: true,
+        timestamps: true,
     });
 
     return Korisnici;

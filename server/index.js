@@ -16,6 +16,6 @@ app.use("/korisnici", korisniciRouter)
 
 db.sequelize.sync().then(()=>{
 app.listen(3001, ()=>{
-    console.log("Server je pokrenut na portu 3301");
+    console.log("Server je pokrenut na portu 3001");
 });
 });
