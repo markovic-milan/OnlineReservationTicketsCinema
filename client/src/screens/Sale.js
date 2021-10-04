@@ -1,12 +1,12 @@
 import React from 'react';
 import axios from "axios";
-import 'C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/components/seats/Seats.css';
+import '../components/seats/Seats.css';
 
 import { useEffect, useState } from "react";
-import fotelja from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/4.jpg"
-import love from"C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/3.jpg"
-import regular from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/1.jpg"
-import vip from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/2.jpg"
+import fotelja from "../components/seats/4.jpg"
+import love from"../components/seats/3.jpg"
+import regular from "../components/seats/1.jpg"
+import vip from "../components/seats/2.jpg"
 
 
 

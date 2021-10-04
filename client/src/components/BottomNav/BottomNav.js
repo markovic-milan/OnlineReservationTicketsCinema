@@ -3,7 +3,7 @@ import './BottomNav.css';
 import React from 'react';
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ikona from "C:/Users/AcerAspireE5/Desktop/SmartCinemaV4/OnlineReservationTicketsCinema/client/src/images/ikona2.png"
+import ikona from "./ikona2.png"
 
 
 function BottomNav() {

@@ -4,8 +4,8 @@ const {VrsteSjedista} = require('../models')
 
 
 router.get('/', async(req, res)=>{
-   const listaVrsta = await VrsteSjedista.findAll();
-   res.json(listaVrsta);
+   const listaSjedista = await VrsteSjedista.findAll();
+   res.json(listaSjedista);
 
 });
 
@@ -15,6 +15,5 @@ router.post("/", async (req, res) => {
   await VrsteSjedista.create(post);
   res.json(post);
 });
-
 
 module.exports = router;

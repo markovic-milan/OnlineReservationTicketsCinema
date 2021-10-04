@@ -24,7 +24,7 @@ function App() {
 
 
         
-      <div className="spacer"></div>
+        <div className="spacer"></div>
       <BottomNav></BottomNav>
       </div>;
     </Router>
