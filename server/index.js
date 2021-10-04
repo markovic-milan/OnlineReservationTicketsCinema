@@ -14,6 +14,10 @@ app.use("/sale", saleRouter)
 const korisniciRouter = require('./routes/Korisnici');
 app.use("/korisnici", korisniciRouter)
 
+const vrsteSjedistaRouter = require('./routes/VrsteSjedista')
+app.use("/vrsteSjedista", vrsteSjedistaRouter);
+
+
 db.sequelize.sync().then(()=>{
 app.listen(3001, ()=>{
     console.log("Server je pokrenut na portu 3301");

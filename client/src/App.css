@@ -1,24 +1,18 @@
 .App {
   text-align: center;
-<<<<<<< HEAD
-=======
 }
 
-.slika{
+.slika {
   width: 220px;
   height: 350px;
 }
 
-html,body, #root, .layout{
+html, body, #root, .layout {
   display: flex;
   margin: 0px;
   padding: 0px;
   flex-direction: column;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
->>>>>>> 543448326d1a904b9860e4f9003e40f0ea11cb5a
-=======
   background: rgb(233, 233, 233);
->>>>>>> origin/homepage
 }
