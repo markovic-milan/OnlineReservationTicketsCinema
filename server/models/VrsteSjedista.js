@@ -1,25 +1,20 @@
 module.exports = (sequelize, DataTypes) =>{
 
 
-    const VrstaSjedista = sequelize.define("VrsteSjedista",{
+    const VrsteSjedista = sequelize.define("Vrste_Sjedista",{
 
         naziv:{
-            type: DataTypes.STRING,
-            allowNull: false,
-            paranoid: true,
-            underscored: true,
-            freezeTableName: true,
+            type:DataTypes.STRING,
+            allowNull:false,
         },
         opis:{
             type:DataTypes.STRING,
             allowNull:false,
-            paranoid: true,
-            underscored: true,
-            freezeTableName: true,
-        },
+
+        }
 
 
     })
-    return VrstaSjedista
+    return VrsteSjedista
 
 }

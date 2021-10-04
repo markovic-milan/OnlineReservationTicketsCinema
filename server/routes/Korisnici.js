@@ -2,9 +2,9 @@ const express = require("express")
 const router = express.Router();
 const {Korisnici} = require('../models')
 
-router.get('/', (req, res)=>{
-    res.json("Korsinici");
-
+router.get('/', async(req, res)=>{
+    const listaFilmova = await Korisnici.findAll();
+   res.json(listaFilmova);
 });
 
 router.post("/",async(req, res)=>{

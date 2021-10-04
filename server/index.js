@@ -15,11 +15,14 @@ app.use("/sale", saleRouter)
 const korisniciRouter = require('./routes/Korisnici');
 app.use("/korisnici", korisniciRouter)
 
+
 const vrsteSjedistaRouter = require('./routes/VrsteSjedista');
 app.use("/vrsteSjedista", vrsteSjedistaRouter)
 
 const kinoRouter = require('./routes/Kino');
 app.use("/kino", kinoRouter)
+
+
 
 db.sequelize.sync().then(()=>{
 app.listen(3001, ()=>{

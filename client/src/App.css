@@ -3,19 +3,19 @@
   
 }
 
-.slika{
+.slika {
   width: 220px;
   height: 350px;
 }
 
 
-*{
+* {
   font-family: cursive;
-    margin: 0px;
+  margin: 0px;
   padding: 0px;
 }
 
-html,body{
+html, body {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -24,12 +24,13 @@ html,body{
   overflow: hidden;
 }
 
-#root{
+#root {
   height: 100%;
   width: 100%;
 }
-.layout{
-    display: flex;
+
+.layout {
+  display: flex;
   flex-direction: column;
   width: 100%; 
   background: rgb(233, 233, 233);
