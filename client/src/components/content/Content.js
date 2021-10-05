@@ -6,11 +6,11 @@ import Slideshow from "../slideshow/Slideshow";
 import Flickity from 'flickity';
 
 const Content = () => {
-  console.log("Content");
     const [filmovi,setFilmovi] = useState([]);
     
   useEffect(()=>{
     axios.get('http://localhost:3001/filmovi').then((resp)=>{
+      console.log(resp.data);
       setFilmovi(resp.data);
       var elem = document.querySelector('.carousel');
       var flkty = new Flickity( elem, {

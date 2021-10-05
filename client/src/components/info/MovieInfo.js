@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import "./MovieInfo.css"
 import slika from '../movie/download.jpg'
+import axios from 'axios';
 
 function MovieInfo(props) {
     const selectedSeats = [];
     var sum = 0;
+    const[film, setFilm] = useState({});
+    useEffect(()=> {
+        axios.get(`http://localhost:3001/filmovi/${props.movie.id}`).then((resp) => {
+            setFilm(resp.data);
+            console.log(resp.data);
+        })
+    },[]);
     const seatHandler = (event) => {
-       
-        
         if(event.target.style.background === "rgb(3, 255, 221)"){
              event.target.style.background="rgb(255, 255, 255)";
              const index = selectedSeats.indexOf(event.target.innerHTML);
@@ -26,6 +32,7 @@ function MovieInfo(props) {
         document.getElementById("seats-numbers").value = selectedSeats;
     
     }
+    const isLoaded = film !== undefined;
     return (
         <div className="movie-reservation-container">
             <div className="transparent-background">                
@@ -38,7 +45,7 @@ function MovieInfo(props) {
                         <p>{props.movie.datumPremijere}</p>
                         <p>{props.movie.termini}</p>
                          <p>{props.movie.zanr}</p>
-                          <p>{props.movie.sadrzajFilma}</p>
+                          { isLoaded ? film.sadrzajFilma: <p>Loading...</p>}
                     </div>
                 </div>
                 <div className="horizontal-fill"></div>

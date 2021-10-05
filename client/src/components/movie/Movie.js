@@ -7,7 +7,7 @@ const Movie = (props) =>{
     console.log("Movie");
     console.log(props.movie.slikaURL);
     var o = {
-        pathname: "/details",
+        pathname: `/filmovi/${props.movie.id}`,
         param: props.movie
     }
 
@@ -19,10 +19,10 @@ const Movie = (props) =>{
                 <h3>{props.movie.orginalniNaslov}</h3>
             </div>
             <div className="movie-time-container">
-                <h3>{props.movie.datumPremijere}</h3>
+                <h3>{props.movie.termini}</h3>
             </div>
              <div className="movie-time-container">
-                <h3>{props.movie.termini}</h3>
+                <h3>{props.movie.zanr}</h3>
             </div>
             <div className="movie-button-container">
                 <Link to={o}>Rezervisi</Link>
