@@ -3,26 +3,33 @@ module.exports = (sequelize, DataTypes) =>{
     const Filmovi = sequelize.define("Filmovi",{
 
 
-        naslov:{
+        orginalniNaslov:{
             type:DataTypes.STRING,
             allowNull:false,
         },
-        opis:{
+        datumPremijere:{
             type:DataTypes.STRING,
             allowNull:false,
-            paranoid: true,
-            underscored: true,
-            freezeTableName: true,
+     
         },
-        vrijemePrikaza:
+        termini:
         {
 
             type:DataTypes.STRING, 
             allowNull:false
         },
+        zanr:{
+            type:DataTypes.STRING, 
+            allowNull:false
+        },
+        sadrzajFilma:{
+             type:DataTypes.STRING, 
+            allowNull:false
 
+        }
 
-    },{
+    },
+    {
         timestamps: false,
         paranoid: true,
         underscored: true,

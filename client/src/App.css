@@ -1,13 +1,11 @@
 .App {
   text-align: center;
-  
 }
 
 .slika {
   width: 220px;
   height: 350px;
 }
-
 
 * {
   font-family: cursive;
@@ -21,6 +19,7 @@ html, body {
   width: 100%;
   height: 100%;
   background: rgb(226, 226, 226);
+  overflow: hidden;
 }
 
 #root {
@@ -31,12 +30,6 @@ html, body {
 .layout {
   display: flex;
   flex-direction: column;
-  width: 100%; 
-  background: rgb(233, 233, 233);
-}
-
-.spacer{
-  margin-bottom: 85px; /* how high is your footer */
-  visibility: hidden; 
-
+  width: 100%;
+  height: 100%;
 }
