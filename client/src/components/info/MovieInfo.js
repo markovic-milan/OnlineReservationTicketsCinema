@@ -18,9 +18,11 @@ function MovieInfo(props) {
                         <img src={slika}/>
                     </div>
                     <div className="movie-text">
-                        <p>{props.movie.naslov}</p>
-                        <p>{props.movie.opis}</p>
-                        <p>{props.movie.vrijemePrikaza}</p>
+                        <p>{props.movie.orginalniNaslov}</p>
+                        <p>{props.movie.datumPremijere}</p>
+                        <p>{props.movie.termini}</p>
+                         <p>{props.movie.zanr}</p>
+                          <p>{props.movie.sadrzajFilma}</p>
                     </div>
                 </div>
                 <div className="horizontal-fill"></div>

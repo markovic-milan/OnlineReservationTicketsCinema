@@ -16,10 +16,13 @@ const Movie = (props) =>{
                 <img src={slika} alt="slika"></img>
             </div>
             <div className="movie-title-container">
-                <h3>{props.movie.naslov}</h3>
+                <h3>{props.movie.orginalniNaslov}</h3>
             </div>
             <div className="movie-time-container">
-                <h3>{props.movie.vrijemePrikaza}</h3>
+                <h3>{props.movie.datumPremijere}</h3>
+            </div>
+             <div className="movie-time-container">
+                <h3>{props.movie.termini}</h3>
             </div>
             <div className="movie-button-container">
                 <Link to={o}>Rezervisi</Link>
