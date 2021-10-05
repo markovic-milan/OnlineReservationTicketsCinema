@@ -4,7 +4,7 @@ const {Filmovi} = require('../models')
 
 router.get('/', async (req, res)=>{
     await Filmovi.findAll().then((filmovi)=>{
-      const filterFilm = filmovi.map((film) =>{return {"id": film.id, "orginalniNaslov":film.orginalniNaslov,"termini": film.termini,
+      const filterFilm = filmovi.map((film) =>{return {"id": film.id,"slika":film.slika, "orginalniNaslov":film.orginalniNaslov,"termini": film.termini,
         "zanr": film.zanr}})
       return res.send(filterFilm);
     });

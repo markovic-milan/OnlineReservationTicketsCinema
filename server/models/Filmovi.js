@@ -39,7 +39,11 @@ module.exports = (sequelize, DataTypes) =>{
         },
           sadrzajFilma:
         {
-            type: DataTypes.STRING, 
+            type: DataTypes.STRING(1024), 
+            allowNull: false
+        }, 
+        slika:{
+              type: DataTypes.STRING, 
             allowNull: false
         }
         

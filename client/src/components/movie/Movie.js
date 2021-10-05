@@ -1,11 +1,11 @@
 import React from "react";
 import './Movie.css';
-import slika from './download.jpg';
+
 import { Link  } from 'react-router-dom';
 
 const Movie = (props) =>{
     console.log("Movie");
-    console.log(props);
+    console.log(props.movie.slika);
     var o = {
         pathname: `/filmovi/${props.movie.id}`,
         param: props.movie
@@ -13,7 +13,7 @@ const Movie = (props) =>{
 
     return <div className="movie-container">
             <div className="movie-img-container">
-                <img src={slika} alt="slika"></img>
+                <img src={props.movie.slika} alt=""></img>
             </div>
             <div className="movie-title-container">
                 <h3>{props.movie.orginalniNaslov}</h3>

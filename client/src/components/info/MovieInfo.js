@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import "./MovieInfo.css"
-import slika from '../images/dontbreathe.jpg';
+
 import axios from 'axios';
 
 function MovieInfo(props) { 
@@ -44,7 +44,7 @@ function MovieInfo(props) {
             <div className="transparent-background">                
                 <div className="movie-info-container">
                     <div className="movie-img">
-                        <img src={slika}/>
+                        <img src={film.slika}/>
                     </div>
                     <div className="movie-text">
                         <p>{film.orginalniNaslov}</p>
