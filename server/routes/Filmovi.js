@@ -15,11 +15,12 @@ router.get('/:id', async (req, res)=>{
   // await Filmovi.findById(req.params.id).then((film)=>{return res.json(film)});    
 });
 
-router.post("/",async(req, res)=>{
-    const post = req.body
-   await  Filmovi.create(post);
-   res.json(post);
-})
+router.post("/", async (req, res) => {
+    console.log(req.body);
+  const post = req.body;
+  await Filmovi.create(post);
+  res.json(post);
+});
 
 
 

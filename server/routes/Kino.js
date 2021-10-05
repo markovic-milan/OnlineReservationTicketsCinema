@@ -1,18 +1,18 @@
 const express = require("express")
 const router = express.Router();
-const {VrsteSjedista} = require('../models')
+const {Kino} = require('../models')
 
 
 router.get('/', async(req, res)=>{
-   const listaSjedista = await VrsteSjedista.findAll();
-   res.json(listaSjedista);
+   const listaKina = await Kino.findAll();
+   res.json(listaKina);
 
 });
 
 router.post("/", async (req, res) => {
     console.log(req.body);
   const post = req.body;
-  await VrsteSjedista.create(post);
+  await Kino.create(post);
   res.json(post);
 });
 

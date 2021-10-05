@@ -8,9 +8,13 @@ module.exports = (sequelize, DataTypes) =>{
         reziser:{
             type:DataTypes.STRING,
             allowNull:false,
+            paranoid: true,
+            underscored: true,
+            freezeTableName: true,
         },
         glumci:
         {
+
             type:DataTypes.STRING, 
             allowNull:false
         },

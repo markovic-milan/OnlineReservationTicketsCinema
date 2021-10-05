@@ -1,6 +1,7 @@
 module.exports = (sequelize, DataTypes) =>{
 
-    const VrsteSjedista = sequelize.define("Vrste_Sjedista",{
+
+    const VrsteSjedista = sequelize.define("VrsteSjedista",{
 
         naziv:{
             type:DataTypes.STRING,
@@ -9,6 +10,7 @@ module.exports = (sequelize, DataTypes) =>{
         opis:{
             type:DataTypes.STRING,
             allowNull:false,
+
         }
 
 
