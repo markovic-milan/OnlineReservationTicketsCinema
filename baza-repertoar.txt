@@ -1,0 +1,73 @@
+{
+    "id": 1,
+    "orginalniNaslov": "Ne diši 2 (2021)",
+    "reziser": "Rodo Sayagues",
+    "glumci": "Stephen Lang, Madelyn Grace, Brendan Sexton III, Adam Young, Fiona O’Shaughnessy",
+    "datumPremijere": "30 okt, 2021",
+    "trajanjeFilma": "98 min",
+    "termini": "16:30, 18:30",
+    "zanr": " horor, triler",
+    "sadrzajFilma": "Norman Nordstrom živi povučeno s Phoenix, mladom djevojkom o kojoj se brine i koju trenira kako bi preživjela. Njihov siguran i miran život narušen je kad grupa muškaraca upadne u njihov dom i otme Phoenix. Norman kreće u lov za njenim otmičarima u napetoj igri mačke i miša. No, ovaj napad izvlači na površinu grijehe iz Normanove prošlosti i Phoenix je prisiljena preispitati njihovu vezu - je li joj on otac ili čudovište?",
+    "slika": "/images/nedisi.jpg"
+},
+{
+    "id": 2,
+    "orginalniNaslov": "No Time to Die",
+    "reziser": "Cary Joji Fukunaga",
+    "glumci": "Daniel Craig, Naomie Harris, Léa Seydoux, Rami Malek",
+    "datumPremijere": "6 okt. 2021",
+    "trajanjeFilma": "2h:06min",
+    "termini": "19:30, 21:30",
+    "zanr": " akcija, avantura, triler",
+    "sadrzajFilma": "Bond je napustio službu i uživa u mirnom životu na Jamajci. Njegov mir neće trajati dugo, kada se pojavi njegov prijatelj, Feliks Liter, moleći ga za pomoć. Misija u kojoj je potrebno da izbave kidnapovanog naučnika ispostaviće se mnogo komplikovanija nego što je bilo očekivano i navešće Bonda na trag misterioznom zlikovcu koji je naoružan novom, opasnom tehnologijom.",
+    "slika": "/images/notimetodie.jpg"
+},
+{
+    "id": 3,
+    "orginalniNaslov": "Toma",
+    "reziser": "Dragan Bjelogrlić",
+    "glumci": "Milan Marić, Tamara Dragičević, Petar Benčina, Andrija Kuzmanović, Sanja Marković, Paulina Manov, Milan Kolak, u ulozi majke - Mirjana Karanović",
+    "datumPremijere": "22 sep, 2021",
+    "trajanjeFilma": "140 min",
+    "termini": "16:15, 17:15, 18:15, 19:00, 19:30, 20:00, 20:30",
+    "zanr": " biografski",
+    "sadrzajFilma": "Film Toma je jedan impresionistički portret Tome Zdravkovića koji prikazuje same njegove početke, baš kao i vrhunac slave, njegove ljubavi koje su ga inspirisale prilikom komponovanja nekih od najvećih hitova, baš kao i odnos sa velikim brojem prijatelja koje je imao u umjetničkom miljeu tadašnje Jugoslavije. Pored Tome, kroz film ćemo pratiti i živote poznatih umjetnika tog vremena: Zorana Radmilovića, Mike Antića, Tozovca i drugih. Toma je biografski film o Tomi Zdravkoviću, čovjeku koga ne pamtimo samo po  njegovim pjesmama i načinu na koji ih je pjevao, već i kao jednog velikog boema - po ponašanju i u duši. Film prati dve linije radnje: 1991. pratimo odnos Tome i doktora koji započinje liječenje Tome i kako se to poznastvo pretvara u prijateljstvo. Druga linija prati Tomin život: od djetinjstva u Pečenejvicma, preko poznanstva sa Silvanom Armenulić koje će presudno uticati na njegovu karijeru ali i na privatni život, dostizanja neslućene visine popularnosti, ali i dna života. Ovo je priča o duši..",
+    "slika": "/images/tomo.png"
+},
+{
+    "id": 4,
+    "orginalniNaslov": "Cry Macho (2021)",
+    "reziser": "Clint Eastwood",
+    "glumci": "lint Eastwood, Dwight Yoakam, Fernanda Urrejola, Eduardo Minett",
+    "datumPremijere": "17 okt, 2021",
+    "trajanjeFilma": "102 min",
+    "termini": "19:00, 19:30, 20:00, 20:30",
+    "zanr": " drama",
+    "sadrzajFilma": "U ovom filmu Eastwood glumi bivšu zvijezdu rodea Mikea Miloa koji je nakon ozlijede na radu koja će mu okončati karijeru i otjerati ga u ovisnost o tabletama i alkoholu… a sve ćemo to saznati iz gotovo prvih rečenica u filmu koje izgovara njegov šef, rančer Howard Polk (igra ga country kantautor i glumac Dwight Yoakam) prije nego mu uruči otkaz. No, ubrzo zatim Polk ipak zaključuje da treba uslugu od Mikea, i to ne neku sitnicu, već želi da njegov ostarjeli bivši zaposlenik otputuje u Meksiko i praktički otme njegovog sina tinejdžera od majke i vrati ga nazad u Teksas...",
+    "slika": "/images/cry.jpg"
+},
+{
+    "id": 5,
+    "orginalniNaslov": " Space Dogs: Tropical Adventure",
+    "reziser": "Inna Evlannikova",
+    "glumci": "lint Eastwood, Dwight Yoakam, Fernanda Urrejola, Eduardo Minett",
+    "datumPremijere": "23 sep, 2021",
+    "trajanjeFilma": "91 min",
+    "termini": " 15:15, +sub/ned 11:30, 13:30",
+    "zanr": "  Avantura",
+    "sadrzajFilma": "Kada se u tropskim krajevima Atlantskog okeana pojavi misteriozni i opasni vrtložni fenomen, Belka i Strelka, prvi astronauti na povratku iz misije na Saturn, su poslati da istraže ovu čudnu pojavu.Dok se upuštaju u okeanske dubine, otkrivaju misteriozni NLO koji pokušava da ukrade svu Zemljinu vodu. Uz pomoć svojih dobrih prijatelja, Belka i Strelka još jednom izvršavaju herojsku misiju spašavanja planete i dalekog doma svojih novih vanzemaljskih prijatelja.",
+    "slika": "/images/psi.jpg"
+},
+
+{
+    "id": 6,
+    "orginalniNaslov": "  Space Jam: A New Legacy",
+    "reziser": "Malcolm D. Lee",
+    "glumci": "LeBron James, Don Cheadle, Khris Davis, Sonequa Martin-Green, Cedric Joe",
+    "datumPremijere": "14 jul, 2021",
+    "trajanjeFilma": "117 min",
+    "termini": " sub/ned 14:00",
+    "zanr": "  Avantura, komedija",
+    "sadrzajFilma": "Ovo transformacijsko putovanje otkriva koliko će daleko neki roditelji ići kako bi se povezali sa svojom djecom. LeBron i njegov sin Dom zarobljeni su u digitalnom prostoru i LeBron ih mora odvesti kući na sigurno,  vodeći  sa sobom i Bugsa, Lolu i cijelu bandu notorno nedisciplinovanih Looneyja Tunesa. U filmu se pojavljuju i mnoge profesionalne košarkaške zvijezde u ulogama u kojima ih do sada niste mogli vidjeti.",
+    "slika": "/images/spacejam.jpg"
+}
