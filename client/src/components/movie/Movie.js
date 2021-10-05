@@ -19,10 +19,14 @@ const Movie = (props) =>{
                 <h3>{props.movie.orginalniNaslov}</h3>
             </div>
             <div className="movie-time-container">
-                <h3>{props.movie.termini}</h3>
+            {(props.movie.zanr.split(",")).map((zanr)=>{
+                     return <span className="termin-container">{zanr}</span>
+                 })}
             </div>
              <div className="movie-time-container">
-                <h3>{props.movie.zanr}</h3>
+                 {(props.movie.termini.split(",")).map((termin)=>{
+                     return <span className="termin-container">{termin}</span>
+                 })}
             </div>
             <div className="movie-button-container">
                 <Link to={o}>Rezervisi</Link>
