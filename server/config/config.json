@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "cinema",
+    "database": "moj_dio",
     "host": "localhost",
     "dialect": "mysql"
   },

@@ -3,13 +3,20 @@ import axios from 'axios';
 import {useEffect, useState} from 'react';
 import Content from '../components/content/Content';
 
+
 function Pocetna() {
-    console.log("POCETNA");
-    return (
-        <div className="content-container">
-            <Content/>
-      </div>
-    )
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+        return (
+            <div className="content-container">
+                <Content/>
+          </div>
+        )
+    } else {
+        return (
+            <div className="content-container">Niste prijavljeni</div>
+        )
+    }
 }
 
 export default Pocetna

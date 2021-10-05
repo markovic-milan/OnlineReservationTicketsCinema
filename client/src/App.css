@@ -32,3 +32,26 @@ html,body{
   width: 100%;
   height: 100%;
 }
+
+
+
+
+.Password {
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: 4vmin;
+  pointer-events: none;
+}
+
+.Username {
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: 4vmin;
+  pointer-events: none;
+}
