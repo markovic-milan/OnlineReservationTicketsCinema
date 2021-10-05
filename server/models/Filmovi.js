@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) =>{
         },
         termini:
         {
-            type: DataTypes.STRING, 
-            allowNull: false
+            type:DataTypes.STRING, 
+            allowNull:false
         },
         zanr:
         {
@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) =>{
         paranoid: true,
         underscored: true,
         freezeTableName: true
-    });
-    return Filmovi;
+    })
+    return Filmovi
+
 }
