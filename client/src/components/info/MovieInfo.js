@@ -1,18 +1,24 @@
 import React, { useState, useEffect} from 'react'
 import "./MovieInfo.css"
-import slika from '../movie/download.jpg'
+import slika from '../images/dontbreathe.jpg';
 import axios from 'axios';
 
-function MovieInfo(props) {
+function MovieInfo(props) { 
+    const [film, setFilm] = useState({});
     const selectedSeats = [];
     var sum = 0;
-    const[film, setFilm] = useState({});
+    var id = (props.movie === undefined) ? window.sessionStorage.getItem("id") : props.movie.id;
+   
     useEffect(()=> {
-        axios.get(`http://localhost:3001/filmovi/${props.movie.id}`).then((resp) => {
-            setFilm(resp.data);
-            console.log(resp.data);
-        })
+            axios.get(`http://localhost:3001/filmovi/${id}`).then((resp) => {
+                setFilm(resp.data);
+            })
     },[]);
+
+    useEffect(()=>{
+        window.sessionStorage.setItem("id",film.id);
+    },[film]);
+
     const seatHandler = (event) => {
         if(event.target.style.background === "rgb(3, 255, 221)"){
              event.target.style.background="rgb(255, 255, 255)";
@@ -32,7 +38,7 @@ function MovieInfo(props) {
         document.getElementById("seats-numbers").value = selectedSeats;
     
     }
-    const isLoaded = film !== undefined;
+
     return (
         <div className="movie-reservation-container">
             <div className="transparent-background">                
@@ -41,13 +47,14 @@ function MovieInfo(props) {
                         <img src={slika}/>
                     </div>
                     <div className="movie-text">
-                        <p>{props.movie.orginalniNaslov}</p>
-                        <p>{props.movie.reziser}</p>
-                        <p>{props.movie.glumci}</p>
-                        <p>{props.movie.datumPremijere}</p>
-                        <p>{props.movie.trajanjeFilma}</p>
-                        <p>{props.movie.zanr}</p>
-                        <p>{props.movie.sadrzajFilma}</p>
+                        <p>{film.orginalniNaslov}</p>
+                        <p>{film.termini}</p>
+                        <p>{film.zanr}</p>
+                        <p>{film.reziser}</p>
+                        <p>{film.glumci}</p>
+                        <p>{film.datumPremijere}</p>
+                        <p>{film.trajanjeFilma}</p>
+                        <p>{film.sadrzajFilma}</p>
                     </div>
                 </div>
                 <div className="horizontal-fill"></div>

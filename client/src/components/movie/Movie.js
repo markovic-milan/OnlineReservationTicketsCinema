@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom';
 
 const Movie = (props) =>{
     console.log("Movie");
-    console.log(props.movie.slikaURL);
+    console.log(props);
     var o = {
         pathname: `/filmovi/${props.movie.id}`,
         param: props.movie
