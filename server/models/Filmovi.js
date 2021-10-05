@@ -24,6 +24,10 @@ module.exports = (sequelize, DataTypes) =>{
             type: DataTypes.STRING, 
             allowNull: false
         },
+        termini:{
+            type: DataTypes.STRING, 
+            allowNull: false
+        },
           zanr:
         {
             type: DataTypes.STRING, 
