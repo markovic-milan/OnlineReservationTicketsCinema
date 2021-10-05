@@ -42,10 +42,12 @@ function MovieInfo(props) {
                     </div>
                     <div className="movie-text">
                         <p>{props.movie.orginalniNaslov}</p>
+                        <p>{props.movie.reziser}</p>
+                        <p>{props.movie.glumci}</p>
                         <p>{props.movie.datumPremijere}</p>
-                        <p>{props.movie.termini}</p>
-                         <p>{props.movie.zanr}</p>
-                          { isLoaded ? film.sadrzajFilma: <p>Loading...</p>}
+                        <p>{props.movie.trajanjeFilma}</p>
+                        <p>{props.movie.zanr}</p>
+                        <p>{props.movie.sadrzajFilma}</p>
                     </div>
                 </div>
                 <div className="horizontal-fill"></div>

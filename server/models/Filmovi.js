@@ -5,16 +5,26 @@ module.exports = (sequelize, DataTypes) =>{
             type: DataTypes.STRING,
             allowNull: false,
         },
-        datumPremijere:{
+        reziser:{
             type:DataTypes.STRING,
             allowNull:false,
         },
-        termini:
+        glumci:
         {
             type:DataTypes.STRING, 
             allowNull:false
         },
-        zanr:
+        datumPremijere:
+        {
+            type: DataTypes.STRING, 
+            allowNull: false
+        },
+          trajanjeFilma:
+        {
+            type: DataTypes.STRING, 
+            allowNull: false
+        },
+          zanr:
         {
             type: DataTypes.STRING, 
             allowNull: false
