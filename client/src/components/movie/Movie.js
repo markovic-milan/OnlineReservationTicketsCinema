@@ -1,7 +1,7 @@
 import React from "react";
 import './Movie.css';
 import slika from './download.jpg';
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 
 const Movie = (props) =>{
     console.log("Movie");
