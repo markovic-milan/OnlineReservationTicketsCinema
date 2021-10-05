@@ -19,7 +19,7 @@ function App() {
           <Route path="/prijava" exact component={Prijava}/>
           <Route path="/registracija" exact component={Registracija}/>
           <Route path="/sale" exact component={Sale}/>
-          <Route path="/details" exact component={Detalji}/>
+          <Route path="/filmovi/*" exact component={Detalji}/>
         </Switch>
 
 
