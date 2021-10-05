@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "bubica",
+    "password": "root",
     "database": "moj_dio",
     "host": "localhost",
     "dialect": "mysql"

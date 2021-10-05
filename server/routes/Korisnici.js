@@ -1,4 +1,5 @@
 const express = require("express");
+
 const { Op } = require("sequelize");
 const { hashPassword, validatePassword } = require("../util/Util");
 const { Korisnici } = require("../models");
@@ -53,7 +54,9 @@ router.post("/", async (req, res, next) => {
         }))
             throw new Error("Korisnicko ime je vec zauzeto.");
 
+        korisnik.lozinka = hashPassword(korisnik.lozinka);
         const result = await Korisnici.create(korisnik);
+        result.lozinka = undefined;
         res.json(result);
         next();
 
