@@ -1,13 +1,21 @@
 const express = require("express")
 const router = express.Router();
-const {Filmovi} = require('../models')
+const {Filmovi, Uskoro} = require('../models')
 
 router.get('/', async (req, res)=>{
+  const sviFilmovi = [2];
     await Filmovi.findAll().then((filmovi)=>{
-      const filterFilm = filmovi.map((film) =>{return {"id": film.id,"slika":film.slika, "orginalniNaslov":film.orginalniNaslov,"termini": film.termini,
+      const repertoar = filmovi.map((film) =>{return {"id": film.id,"slika":film.slika, "orginalniNaslov":film.orginalniNaslov,"termini": film.termini,
         "zanr": film.zanr}})
-      return res.send(filterFilm);
-    });
+        sviFilmovi[0] = repertoar;
+    });      
+    
+    await Uskoro.findAll().then((filmovi)=>{
+      const uskoro = filmovi.map((film) =>{return {"id": film.id,"slika":film.slika, "orginalniNaslov":film.orginalniNaslov, "zanr": film.zanr}})
+      sviFilmovi[1] = uskoro;
+    });     
+
+    return res.send(sviFilmovi);
 });
 
 router.get('/:id', async (req, res)=>{
@@ -22,6 +30,12 @@ router.post("/", async (req, res) => {
   res.json(post);
 });
 
+router.post("/u", async (req, res) => {
+    console.log(req.body);
+  const post = req.body;
+  await Uskoro.create(post);
+  res.json(post);
+});
 
 
 
