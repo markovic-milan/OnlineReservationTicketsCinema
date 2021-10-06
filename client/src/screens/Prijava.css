@@ -1,0 +1,65 @@
+
+.login-form-container {
+    position: relativel;
+    background-color: white;
+    border-radius: .4rem;
+    box-shadow: 1px 2px 11px dimgrey;
+    margin: auto auto;
+    width: 20rem;
+    height: 25rem;
+    padding: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-form .form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:4.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    margin-bottom: .5rem;
+}
+
+.form-input {
+    font-size: 1.2rem;
+    border-radius: 8px;
+    font-family: cursive;
+}
+
+.text-input {
+    background-color: rgb(226, 226, 226);
+    color: black;
+    height: 2.5rem;
+    background-color: white;
+    box-shadow: 1px 1px 7px lightsteelblue;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+    font-size: 1rem;
+}
+
+.submit-button {
+    height: 3rem;
+    color: white;
+    background-color: blueviolet;
+    box-shadow: 1px 1px 7px black;
+    width: 100%;
+    cursor: pointer;   
+}
+
+.submit-button:hover {
+    background-color: darkviolet;
+}
