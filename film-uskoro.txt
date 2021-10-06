@@ -1,0 +1,69 @@
+{
+    "id": 1,
+    "orginalniNaslov": "Iza rešetaka ",
+    "reziser": "Joe Carnahan",
+    "glumci": "Gerard Butler, Frank Grillo, Toby Huss",
+    "datumPremijere": "16 sep, 2021",
+    "trajanjeFilma": "108 min",
+    "zanr": "akcija, triler",
+    "sadrzajFilma": "Priča prati lukavog prevaranta koji bježi od plaćenog ubice. Osmišljava šemu kako se sakriti u policijskoj stanici u malom gradu - ali kad se ubica pojavi na stanici, nesrećni policajac novak nađe se, ni kriv ni dužan, na nišanu…",
+    "slika": "/images/copsshop.png"
+},
+{
+    "id": 2,
+    "orginalniNaslov": "Venom: Let There Be Carnage",
+    "reziser": "Andy Serkis",
+    "glumci": "Tom Hardy, Woody Harrelson, Michelle Williams, Reid Scott, Naomie Harris",
+    "datumPremijere": "14 okt, 2021",
+    "trajanjeFilma": "126 min",
+    "zanr": "akcija, naučna-fantastika",
+    "sadrzajFilma": "Tom Hardy vraća se na veliko platno kao ubojiti zaštitnik Venom, jedan od najvećih i najkompleksnijih MARVEL-ovih likova. U režiji Andyja Serkisa u filmu glume i Michelle Williams, Naomie Harris te Woody Harrelson u ulozi negativca Cletusa Kasadya / Carnagea.",
+    "slika": "/images/venom.jpg"
+},
+{
+    "id": 3,
+    "orginalniNaslov": "Dune (2021)",
+    "reziser": "Denis Villeneuve",
+    "glumci": "Rebecca Ferguson, Timothée Chalamet, Zendaya",
+    "datumPremijere": "21 okt, 2021",
+    "trajanjeFilma": "155 min",
+    "zanr": "SF avantura",
+    "sadrzajFilma": "Priča prati Paula Atreidesa iz kuće Atreides, sjajnog i nadarenog mladića rođenog za velike stvari, koji mora otputovati na najopasniju planetu u svemiru kako bi osigurao budućnost svoje porodice i svog naroda. Nađe se usred sukoba oko ekskluzivne distribucije najcjenjenijim resursom koji postoji, najvrijednijem elementu galaksije koji se nalazi samo na Arrakisu i koji može otključati najveći potencijal čovječanstva, u kojem će preživjeti samo oni koji mogu pobijediti svoj strah.",
+    "slika": "/images/dune.jpg"
+},
+{
+    "id": 4,
+    "orginalniNaslov": "Posljednji dvoboj (2021)",
+    "reziser": "Ridley Scott",
+    "glumci": "Matt Damon, Ben Affleck, Adam Driver, Jodie Comer",
+    "datumPremijere": "14 okt, 2021",
+    "trajanjeFilma": " 152 min.",
+    "zanr": "drama",
+    "sadrzajFilma": "Radnja smještena u Francusku 14. vijeka, epska je priča o izdaji i pravdi, ispričana s tri različita gledišta: dva viteza (dobitnik Oscara Matt Damon i za Oscara nominovani Adam Driver), čiji je odnos na iskušenji radi izdaje, i mlade žena (dobitnica Emmyja Jodie Comer) koja pokušava preživjeti u brutalnoj i opresivnoj kulturi tog doba.",
+    "slika": "/images/duel.jpg"
+},
+{
+    "id": 5,
+    "orginalniNaslov": "Božiji čovjek (2021)",
+    "reziser": "Jelena Popovic",
+    "glumci": "Mickey Rourke, Alexander Petrov, Aris Servetalis",
+    "datumPremijere": "21 okt, 2021",
+    "trajanjeFilma": "109 min",
+    "zanr": "drama, biografski",
+    "sadrzajFilma": "Život Svetog Nektarija Eginskog iz Grčke bio je praćen progonima i gonjenjem. Sveštenik običnog naroda, njegova poniznost iritirala je podređeni krug sveštenstva, a njegova predanost dodatno pobuđivala njihove sumnje i klevet. Upkos tome što je lišen crkve i prognan iz Egipta i parohijana koji su ga voljeli, Nektarije se prepustio tome da njegova vjera u Boga bude najbolja odbrana..",
+    "slika": "/images/covek.jpg"
+},
+{
+    "id": 6,
+    "orginalniNaslov": "Ron’s Gone Wrong (2021)",
+    "reziser": " Sarah Smith, Jean-Philippe Vine, Octavio E. Rodriguez",
+    "glumci": "sin",
+    "datumPremijere": "21 okt, 2021",
+    "trajanjeFilma": " 106 min",
+    "zanr": " animirani",
+    "sadrzajFilma": " Ovo je priča o Barneyju, neobičnom dječaku koji se bori s vladavinom društvenih medija, i Ronu, njegovom novom digitalnom uređaju koji može hodati i razgovarati, i koji je stvoren da mu bude trenutni ‘najbolji prijatelj‘.Ronove urnebesne smetnje pokreću ih na nezaboravno putovanje u kojem se dječak i robot upoznaju s izazovima, ali i neslućenim prednostima istinskog prijateljstva.",
+    "slika": "/images/ronsgone.jpg"
+},
+
+
+
