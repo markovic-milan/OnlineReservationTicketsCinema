@@ -24,13 +24,8 @@ function App() {
           <Route path="/sale" exact component={Sale}/>
           <Route path="/filmovi/*" exact component={Detalji}/>
         </Switch>
-<<<<<<< HEAD
-      <BottomNav></BottomNav>
-      </div>
-=======
         <ToastContainer hideProgressBar></ToastContainer>
       </div>;
->>>>>>> 6e16b2822249cbec472fdc8ade9cdc024f8f906d
     </Router>
 }
 

@@ -12,8 +12,12 @@ module.exports = (sequelize, DataTypes) =>{
             allowNull:false,
 
         }
-
-
+        
+    },{
+        timestamps: false,
+        paranoid: true,
+        underscored: true,
+        freezeTableName: true
     })
     return VrsteSjedista
 
