@@ -25,12 +25,15 @@ const isLoaded = filmovi.length > 0;
     return <div>
             <h1>Repertoar</h1>
             <div className="movies-container">
-              {isLoaded ?  <Slideshow movies={filmovi} selected/> : <p>Loading...</p>}
+              {isLoaded ?  <Slideshow movies={filmovi} selected/> : <p>Loading...</p>}  
+             
+            </div>
+            <div className="movies-container1">
+             <Slideshow movies={filmovi} /> 
+             
             </div>
 
-            {/* <div className="movies-container">
-              <Slideshow klasa={"carousel2"} movies={filmovi}/>
-            </div> */}                       
+                    
     </div>
 }
 
