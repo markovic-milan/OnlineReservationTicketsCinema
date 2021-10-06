@@ -1,17 +1,25 @@
 /*Za slidebar*/
-  
+
+
+  .flickity-viewport{
+      padding: 1em 0em 3em 0em;
+  }
 .carousel-cell {
     margin: 5px;
     width: 220px;
-    height:500px;
-    margin-right: 30px;
+    height: 33em;
+    margin-right: 5em;
     border-radius: 10px;
     overflow: hidden;
     counter-increment: gallery-cell;
-    box-shadow: 0px 0px 3px 1px rgb(255, 61, 126);
+    box-shadow: 0px 1px 10px 3px rgb(20, 0, 66);
     background: rgb(255, 255, 255);
 }
 
 .flickity-page-dots {
    display: none;
+}
+
+.carousel1 .flickity-viewport{
+  padding: 1em 0em 10em 0em;
 }
