@@ -42,8 +42,8 @@ function Sale() {
         }
         return(
           <div className="sala-container">
-            <p>Sala br.1</p>
-            {/* <p>{value.brojSale}</p> */}
+            <p>Sala broj </p>
+            { <p>{value.brojSale}</p> }
             <div className="item">
               <div className="title"> {value.naziv}</div>
               <div className="body"> {value.opis}  </div>
