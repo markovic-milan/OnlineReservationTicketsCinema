@@ -30,23 +30,6 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-}
-
-.Password {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-  height: 4vmin;
-  pointer-events: none;
-}
-
-.Username {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-  height: 4vmin;
-  pointer-events: none;
+  background: rgb(233, 233, 233);
+  background: linear-gradient(0deg, rgb(0, 0, 0), rgb(255, 255, 255));
 }

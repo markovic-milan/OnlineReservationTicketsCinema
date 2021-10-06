@@ -17,30 +17,33 @@ function BottomNav() {
     }, []);
   
     return (
-      <div className="footer"> 
+      <div>
+        {/* <div className="spacer"></div> */}
+        <div className="footer">
+          <div className="leftSide">
+              <div className="wrapperIcon"> 
+                  <img className="icon" src={ikona}></img>
+              </div>
+          </div>
 
-        <div className="leftSide">
-            <div className="wrapperIcon"> 
-                <img className="icon" src={ikona} width="110" height="110"></img>
-            </div>
+          {listOfKina.map((value,key)=>{
+            return(
+              <div className="rightSide">
+                  <div className="container">
+                      <p className="adresa"> Adresa: {value.adresa}</p> 
+                      <p className="email"> Email: {value.email}</p> 
+                      <p className="telefon"> Telefon: {value.brojTelefona}</p> 
+                      <p className="adresa"> Fax telefon: {value.faxTelefon}</p> 
+                  </div>
+                  
+              </div>
+            )
+          })}<div>
+                    <p className="copyright">Copyright 2021 © SmartCinema. Sva prava zadržana.</p>
+                  </div>
         </div>
-
-        {listOfKina.map((value,key)=>{
-          return(
-            <div className="rightSide">
-                <div className="container">
-                    <div className="adresa"> Adresa: {value.adresa}</div> 
-                    <div className="email"> Email: {value.email}</div> 
-                    <div className="telefon"> Telefon: {value.brojTelefona}</div> 
-                    <div className="adresa"> Fax telefon: {value.faxTelefon}</div> 
-                </div>
-            </div>
-          )
-        })}
       </div>
-      
     );
-  
   }
   
   export default BottomNav
