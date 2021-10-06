@@ -146,7 +146,7 @@ label {
     border: none;
     font-size: 1.5rem;
     width: 100%;
-    box-shadow: 0px 0px 5px 2px rgb(195, 90, 255);
+    box-shadow: 0px 0px 3px 1px rgb(255, 255, 255);
     padding: 0.5em 0em;
     color: rgb(255, 255, 255);
     cursor: pointer;

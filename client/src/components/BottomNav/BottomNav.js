@@ -17,8 +17,6 @@ function BottomNav() {
     }, []);
   
     return (
-      <div>
-        {/* <div className="spacer"></div> */}
         <div className="footer">
           <div className="leftSide">
               <div className="wrapperIcon"> 
@@ -42,7 +40,6 @@ function BottomNav() {
                     <p className="copyright">Copyright 2021 © SmartCinema. Sva prava zadržana.</p>
                   </div>
         </div>
-      </div>
     );
   }
   

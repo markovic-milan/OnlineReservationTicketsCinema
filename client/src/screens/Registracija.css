@@ -1,6 +1,6 @@
 .registration-form-container {
-    position: relativel;
-    background-color: white;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: .4rem;
     box-shadow: 1px 2px 11px dimgrey;
     margin: auto auto;
@@ -19,7 +19,6 @@
 .registration-form .form-field span {
     color: red;
     font-size: .8rem;
-    font-family: Arial, Helvetica, sans-serif;
     display: block;
     min-height: 1rem;
 }
@@ -37,14 +36,16 @@
 }
 
 .form-label {
-    font-size: 1rem;
+    font-weight: bold;
+    font-size: 1.4rem;
     color: black;
     background-color: white;
     margin-bottom: .5rem;
+    background:transparent;
 }
 
 .form-input {
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 8px;
     font-family: cursive;
 }

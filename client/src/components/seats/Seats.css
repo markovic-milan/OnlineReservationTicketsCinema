@@ -1,12 +1,12 @@
 /*sale*/
 .uvod{
-    display: flex;
-    flex-direction: column;
-    color: black; 
+    position: relative;
+    color: rgb(255, 255, 255); 
     padding: 2em 2em 3em 2em;
     font-size: 40px;
     font-weight: bold;
     text-align: center;
+    margin: 0em auto auto auto;
     text-align-last: center;
   }
   
