@@ -1,0 +1,74 @@
+.registration-form-container {
+    position: relativel;
+    background-color: white;
+    border-radius: .4rem;
+    box-shadow: 1px 2px 11px dimgrey;
+    margin: auto auto;
+    width: 30rem;
+    padding: 2rem;
+    
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.registration-form .form-field span {
+    color: red;
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    min-height: 1rem;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+}
+
+.form-label {
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    margin-bottom: .5rem;
+}
+
+.form-input {
+    font-size: 1rem;
+    border-radius: 8px;
+    font-family: cursive;
+}
+
+.text-input {
+    background-color: rgb(226, 226, 226);
+    color: black;
+    height: 2rem;
+    background-color: white;
+    box-shadow: 1px 1px 7px lightsteelblue;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.submit-button {
+    height: 3rem;
+    color: white;
+    background-color: blueviolet;
+    box-shadow: 1px 1px 7px black;
+    width: 50%;
+    cursor: pointer;  
+    align-self: center; 
+}
+
+.submit-button:hover {
+    background-color: darkviolet;
+}

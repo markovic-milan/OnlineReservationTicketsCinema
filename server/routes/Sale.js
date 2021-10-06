@@ -12,8 +12,6 @@ router.post("/",async(req, res)=>{
     const post = req.body
    await  Sale.create(post);
    res.json(post);
-
-     
 })
 
 module.exports = router;

@@ -2,9 +2,10 @@ const express = require("express")
 const router = express.Router();
 const {VrsteSjedista} = require('../models')
 
+
 router.get('/', async(req, res)=>{
-   const listaVrsta = await VrsteSjedista.findAll();
-   res.json(listaVrsta);
+   const listaSjedista = await VrsteSjedista.findAll();
+   res.json(listaSjedista);
 
 });
 

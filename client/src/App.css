@@ -19,7 +19,6 @@ html, body {
   width: 100%;
   height: 100%;
   background: rgb(226, 226, 226);
-  overflow: hidden;
 }
 
 #root {
@@ -31,5 +30,6 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  background: rgb(233, 233, 233);
+  background: linear-gradient(0deg, rgb(0, 0, 0), rgb(255, 255, 255));
 }

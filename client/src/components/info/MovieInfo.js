@@ -1,38 +1,60 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import "./MovieInfo.css"
-import slika from '../movie/download.jpg'
 
-function MovieInfo(props) {
+import axios from 'axios';
+
+function MovieInfo(props) { 
+    const [film, setFilm] = useState({});
     const selectedSeats = [];
+    var sum = 0;
+    var id = (props.movie === undefined) ? window.sessionStorage.getItem("id") : props.movie.id;
+   
+    useEffect(()=> {
+            axios.get(`http://localhost:3001/filmovi/${id}`).then((resp) => {
+                setFilm(resp.data);
+            })
+    },[]);
+
+    useEffect(()=>{
+        window.sessionStorage.setItem("id",film.id);
+    },[film]);
+
     const seatHandler = (event) => {
-       
-        
-        if(event.target.style.background === "lightblue"){
-             event.target.style.background="rgb(168, 144, 144)";
+        if(event.target.style.background === "rgb(3, 255, 221)"){
+             event.target.style.background="rgb(255, 255, 255)";
              const index = selectedSeats.indexOf(event.target.innerHTML);
             if(index > -1){
                 selectedSeats.splice(index, 1);
+                sum-=5;
+                document.getElementById("ukupno").innerHTML=sum + ".00 KM";
             }
-          
          }else{
-             
-            event.target.style.background="lightblue";
+            sum+=5;
+            event.target.style.background="rgb(3, 255, 221)";
             selectedSeats.push(event.target.innerHTML);
+            document.getElementById("ukupno").innerHTML=sum + ".00 KM";
+            
         }
         document.getElementById("seats-numbers").value = selectedSeats;
     
     }
+
     return (
         <div className="movie-reservation-container">
             <div className="transparent-background">                
                 <div className="movie-info-container">
                     <div className="movie-img">
-                        <img src={slika}/>
+                        <img src={film.slika}/>
                     </div>
                     <div className="movie-text">
-                        <p>{props.movie.naslov}</p>
-                        <p>{props.movie.opis}</p>
-                        <p>{props.movie.vrijemePrikaza}</p>
+                        <p>{film.orginalniNaslov}</p>
+                        <p>{film.termini}</p>
+                        <p>{film.zanr}</p>
+                        <p>{film.reziser}</p>
+                        <p>{film.glumci}</p>
+                        <p>{film.datumPremijere}</p>
+                        <p>{film.trajanjeFilma}</p>
+                        <p>{film.sadrzajFilma}</p>
                     </div>
                 </div>
                 <div className="horizontal-fill"></div>
@@ -100,7 +122,7 @@ function MovieInfo(props) {
                                 </select>
                                 <label>Pozicije</label>
                                 <input type="text" id="seats-numbers" name="seat-numbers" readOnly className="input-seat" ></input>
-                                <div className="prostor"/>
+                                <div className="prostor" id="ukupno">0.00 KM</div>
                                 <input type="submit" value="Potvrdi" className="button-submit"/>
                                             </form></div>
                 </div>
