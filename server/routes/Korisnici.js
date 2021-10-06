@@ -6,11 +6,6 @@ const { Korisnici } = require("../models");
 
 const router = express.Router();
 
-<<<<<<< HEAD
-router.get('/', async(req, res)=>{
-    const listaFilmova = await Korisnici.findAll();
-   res.json(listaFilmova);
-=======
 
 //Dodati za prijavu
 router.post("/login", async (req, res, next) => {
@@ -69,7 +64,6 @@ router.post("/", async (req, res, next) => {
         next(error);
     }
 
->>>>>>> 6b25768e51c574744ca22ecfbf82f43e65de3dc4
 });
 
 
