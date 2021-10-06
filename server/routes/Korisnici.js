@@ -58,7 +58,6 @@ router.post("/", async (req, res, next) => {
             throw error;
         }
 
-
         if (await Korisnici.findOne({
             where: {
                 korisnicko_ime: korisnik.korisnicko_ime
@@ -92,17 +91,13 @@ router.post("/", async (req, res, next) => {
 
 
 router.put("/:id", authJwt.verifyToken, async (req, res, next) => {
-
     try {
-
         const _id = req.params.id;
         const korisnik = req.body;
-
 
         if (!_id || !korisnik.ime || !korisnik.prezime || !korisnik.email || !korisnik.korisnicko_ime || !korisnik.lozinka) {
             throw new Error("Provjerite parametre.");
         }
-
 
         if (await Korisnici.findOne({
             where: {
@@ -126,25 +121,20 @@ router.put("/:id", authJwt.verifyToken, async (req, res, next) => {
 
 });
 
-router.delete("/:id", async (req, res, next) => {
-
+router.delete("/:id", authJwt.verifyToken, async (req, res, next) => {
     try {
-
         const _id = req.params.id;
 
-        if (!_id)
+        if (!_id) {
             throw new Error("Greska");
+        }
 
         const result = await Korisnici.destroy({
             where: { id: _id }
         });
 
-
-
         res.json(result);
         next();
-
-
     } catch (error) {
         next(error);
     }
