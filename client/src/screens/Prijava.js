@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 import { useState } from "react";
-import axios from 'axios';
+import { useHistory } from 'react-router';
 import './Prijava.css';
+import AuthService from '../services/auth';
+import * as messages from "../constants/messages";
 
 
 function Prijava() {
@@ -9,51 +11,65 @@ function Prijava() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
+    const [logInError, setLogInError] = useState(false);
 
-    let axiosConfig = {
-        headers: {
-            'Content-Type': 'application/json;charset=UTF-8',
-            "Access-Control-Allow-Origin": "*",
+    const [errors, setErrors] = useState({
+        username: "",
+        password: ""
+    });
+
+    const history = useHistory();
+
+    const validateData = () => {
+        const newState = {
+            username: username ? "" : messages.FIELD_REUIRED,
+            password: password ? "" : messages.FIELD_REUIRED
+        };
+
+        setErrors(newState);
+        return !newState.username && !newState.password;
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        if (validateData()) {
+            try {
+                const account = await AuthService.logIn(username, password);
+                AuthService.setAccount(account.data);
+                history.push("/pocetna");
+            } catch (error) {
+                console.log('dada')
+                setLogInError(true);
+            }
+        } else {
+            setLogInError(false);
         }
     };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        axios.post('http://localhost:3001/korisnici/login', {
-            korisnicko_ime: username,
-            lozinka: password
-        }, axiosConfig)
-            .then((res) => {
-                localStorage.setItem("user", JSON.stringify(res));
-            })
-            .catch((err) => {
-                console.log("AXIOS ERROR: ", err);
-            });
-    }
 
     return (
         <div className="login-form-container">
             <form className="login-form" onSubmit={handleSubmit}>
                 <div className="form-field">
-                    <label for="username" className="form-label">Korisničko ime</label>
+                    <label htmlFor="username" className="form-label">Korisničko ime</label>
                     <input type="text" id="username" value={username} className="form-input text-input"
-                        onChange={(e) => setUsername(e.target.value)} required={true} />
+                        onChange={(e) => setUsername(e.target.value)} />
+                    <span>{errors.username}</span>
                 </div>
                 <div className="form-field">
-                    <label for="password" className="form-label">Lozinka</label>
+                    <label htmlFor="password" className="form-label">Lozinka</label>
                     <input type="password" id="password" value={password} className="form-input text-input"
-                        onChange={(e) => setPassword(e.target.value)} required={true} />
+                        onChange={(e) => setPassword(e.target.value)} />
+                    <span>{errors.password}</span>
                 </div>
+                {logInError &&
+                    <div class="error-message">
+                        Pogrešna lozinka ili korisničko ime
+                    </div>
+                }
                 <br />
-                <input type="submit" name="LogIn" value="Log In" className="form-input submit-button" />
+                <input type="submit" name="LogIn" value="Log In" className="form-input login-button" />
             </form>
         </div>
-
-
-
-
-
-
     )
 }
 

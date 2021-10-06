@@ -1,3 +1,5 @@
+const crypto = require("crypto");
+
 module.exports = {
-    secret: "secret-key"
-  };
+  secret: crypto.randomBytes(30).toString('hex')
+};
