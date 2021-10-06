@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import './SearchBar.css'
 
 const SearchBar = () => {
+    const [keyword, setKeyword] = useState("");
+
     return <div className="searchbar-container">
         <div className="searchbar-wrapper">
             <div className="searchbar">
-                <input type="text" value="Pretraga"/>
+                <input type="text" value="Pretraga" onChange={(e) => setKeyword(e.target.value)}/>
             </div>
         </div>
         <button className="search-button">  
