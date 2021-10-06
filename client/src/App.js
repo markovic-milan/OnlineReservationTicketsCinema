@@ -7,6 +7,9 @@ import Content from './components/content/Content';
 import Prijava from './screens/Prijava';
 import Registracija from './screens/Registracija'
 import Detalji from './screens/Detalji';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+
 function App() {
 
   return <Router> 
@@ -20,6 +23,7 @@ function App() {
           <Route path="/sale" exact component={Sale}/>
           <Route path="/details" exact component={Detalji}/>
         </Switch>
+        <ToastContainer hideProgressBar></ToastContainer>
       </div>;
     </Router>
 }

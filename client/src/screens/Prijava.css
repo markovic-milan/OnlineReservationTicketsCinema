@@ -1,30 +1,46 @@
 
 .login-form-container {
-    position: relativel;
+    position: relative;
     background-color: white;
     border-radius: .4rem;
     box-shadow: 1px 2px 11px dimgrey;
     margin: auto auto;
     width: 20rem;
-    height: 25rem;
+    height: 21rem;
     padding: 2rem;
+}
+
+.error-message {
+    background-color: white;
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 30px;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
+    margin: 2rem 0;
 }
 
 .login-form .form-field {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height:4.5rem;
-    margin-bottom: 2rem;
+    min-height: 5.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-form .form-field span {
+    color: red;
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
 }
 
 .form-label {
@@ -49,17 +65,20 @@
     padding: 0 10px;
     width: calc(100% - 20px);
     font-size: 1rem;
+    margin-bottom: .5rem;
 }
 
-.submit-button {
+.login-button {
     height: 3rem;
     color: white;
     background-color: blueviolet;
     box-shadow: 1px 1px 7px black;
     width: 100%;
     cursor: pointer;   
+    bottom: 3rem;
+    position: absolute;
 }
 
-.submit-button:hover {
+.login-button:hover {
     background-color: darkviolet;
 }
