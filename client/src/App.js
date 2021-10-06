@@ -21,12 +21,8 @@ function App() {
           <Route path="/sale" exact component={Sale}/>
           <Route path="/filmovi/*" exact component={Detalji}/>
         </Switch>
-
-
-        
-        <div className="spacer"></div>
       <BottomNav></BottomNav>
-      </div>;
+      </div>
     </Router>
 }
 
