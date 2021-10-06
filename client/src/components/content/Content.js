@@ -25,20 +25,8 @@ const isLoaded = filmovi.length > 0;
     return <div>
             <h1>Repertoar</h1>
             <div className="movies-container">
-<<<<<<< HEAD
-              {isLoaded ?  <Slideshow movies={filmovi} selected/> : <p>Loading...</p>}  
-             
-            </div>
-            <div className="movies-container1">
-             <Slideshow movies={filmovi} /> 
-             
-            </div>
-
-                    
-=======
               {isLoaded ?  <Slideshow movies={filmovi} selected/> : <p>Loading...</p>}
             </div>                
->>>>>>> 6d8b218c1e0d9bc7080a633e075f37f060bdffe6
     </div>
 }
 
