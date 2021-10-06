@@ -25,6 +25,7 @@ function App() {
           <Route path="/filmovi/*" exact component={Detalji}/>
         </Switch>
         <ToastContainer hideProgressBar></ToastContainer>
+        
       </div>;
     </Router>
 }
