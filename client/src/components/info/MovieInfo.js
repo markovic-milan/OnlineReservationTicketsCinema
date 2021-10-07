@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./MovieInfo.css";
 import * as constants from "../../constants/constants";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
+
+var o = {
+  pathname: `/kupovina`
+}
 
 function MovieInfo(props) {
   var reservation_container;
@@ -145,7 +151,9 @@ function MovieInfo(props) {
               <div className="prostor" id="ukupno">
                 0.00 KM
               </div>
+              <Link to={o}>
               <input type="submit" value="Potvrdi" className="button-submit" />
+              </Link>
             </form>
           </div>
         </div>
