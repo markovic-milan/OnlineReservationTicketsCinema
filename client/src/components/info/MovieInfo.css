@@ -5,7 +5,7 @@
     padding-right: 10%;
     padding-top: 3em;
     padding-bottom: 3em;
-    background-image: url('./kino3.jpg');
+    background-image: url("./kino3.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -47,10 +47,32 @@
     word-wrap: break-word;
 }
 
-.reservation-container {
-    display: flex;
+.login-container-loged {
+    display: none;
+}
+
+.login-container {
+    display: block;
     box-sizing: border-box;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container>a.prijava {
+    color: blueviolet;
+    position: inherit;
+    font-size: 1.3rem;
+}
+
+.reservation-container {
+    display: none;
+}
+
+.reservation-container-loged {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }

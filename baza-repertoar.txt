@@ -16,7 +16,7 @@
     "reziser": "Cary Joji Fukunaga",
     "glumci": "Daniel Craig, Naomie Harris, Léa Seydoux, Rami Malek",
     "datumPremijere": "6 okt. 2021",
-    "trajanjeFilma": "2h:06min",
+    "trajanjeFilma": "126min",
     "termini": "19:30, 21:30",
     "zanr": " akcija, avantura, triler",
     "sadrzajFilma": "Bond je napustio službu i uživa u mirnom životu na Jamajci. Njegov mir neće trajati dugo, kada se pojavi njegov prijatelj, Feliks Liter, moleći ga za pomoć. Misija u kojoj je potrebno da izbave kidnapovanog naučnika ispostaviće se mnogo komplikovanija nego što je bilo očekivano i navešće Bonda na trag misterioznom zlikovcu koji je naoružan novom, opasnom tehnologijom.",
@@ -53,7 +53,7 @@
     "glumci": "lint Eastwood, Dwight Yoakam, Fernanda Urrejola, Eduardo Minett",
     "datumPremijere": "23 sep, 2021",
     "trajanjeFilma": "91 min",
-    "termini": " 15:15, +sub/ned 11:30, 13:30",
+    "termini": " 15:15, 11:30, 13:30",
     "zanr": "  Avantura",
     "sadrzajFilma": "Kada se u tropskim krajevima Atlantskog okeana pojavi misteriozni i opasni vrtložni fenomen, Belka i Strelka, prvi astronauti na povratku iz misije na Saturn, su poslati da istraže ovu čudnu pojavu.Dok se upuštaju u okeanske dubine, otkrivaju misteriozni NLO koji pokušava da ukrade svu Zemljinu vodu. Uz pomoć svojih dobrih prijatelja, Belka i Strelka još jednom izvršavaju herojsku misiju spašavanja planete i dalekog doma svojih novih vanzemaljskih prijatelja.",
     "slika": "/images/psi.jpg"
@@ -66,7 +66,7 @@
     "glumci": "LeBron James, Don Cheadle, Khris Davis, Sonequa Martin-Green, Cedric Joe",
     "datumPremijere": "14 jul, 2021",
     "trajanjeFilma": "117 min",
-    "termini": " sub/ned 14:00",
+    "termini": "14:00",
     "zanr": "  Avantura, komedija",
     "sadrzajFilma": "Ovo transformacijsko putovanje otkriva koliko će daleko neki roditelji ići kako bi se povezali sa svojom djecom. LeBron i njegov sin Dom zarobljeni su u digitalnom prostoru i LeBron ih mora odvesti kući na sigurno,  vodeći  sa sobom i Bugsa, Lolu i cijelu bandu notorno nedisciplinovanih Looneyja Tunesa. U filmu se pojavljuju i mnoge profesionalne košarkaške zvijezde u ulogama u kojima ih do sada niste mogli vidjeti.",
     "slika": "/images/spacejam.jpg"

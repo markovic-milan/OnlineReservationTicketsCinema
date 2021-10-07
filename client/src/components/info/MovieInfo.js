@@ -1,7 +1,12 @@
-import React, { useState, useEffect} from 'react'
-import "./MovieInfo.css"
+import React, { useState, useEffect } from "react";
+import "./MovieInfo.css";
+import AuthService from "../../services/auth";
+import axios from "axios";
+import * as constants from "../../constants/constants";
 
-import axios from 'axios';
+function MovieInfo(props) {
+  var reservation_container;
+  var login_container;
 
 function MovieInfo(props) { 
     console.log(props.movie.termini);
@@ -51,6 +56,8 @@ function MovieInfo(props) {
         document.getElementById("seats-numbers").value = selectedSeats;
         }
     }
+    document.getElementById("seats-numbers").value = selectedSeats;
+  };
 
     const isLoadedSeats = sjediste.length > 0;
     const loaded = film.length > 0;
@@ -73,7 +80,13 @@ function MovieInfo(props) {
                     </div>
                 </div>
                 <div className="horizontal-fill"></div>
-                <div className="reservation-container">
+                <div className={login_container}>
+                    <label>Za rezervaciju karata potrebno je da se prijavite!</label>
+                    <a className="prijava" href="/prijava">
+                        Prijava
+                    </a>
+                </div>
+                <div className={reservation_container}>
                     <div className="seats">
                         <div className="screen">Izaberite sjediste</div>
                     <div class="grid-container">
@@ -107,7 +120,7 @@ function MovieInfo(props) {
                 </div>
             </div> 
        </div>
-    )
+  );
 }
 
-export default MovieInfo
+export default MovieInfo;
