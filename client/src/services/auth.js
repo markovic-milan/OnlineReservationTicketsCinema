@@ -8,6 +8,22 @@ const baseConfig = {
     }
 };
 
+
+const authConfig = () => {
+    const accessToken = JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY))?.accessToken;
+    return {
+        headers: {
+            ...baseConfig.headers,
+            'x-access-token': accessToken
+        }
+    };
+};
+
+const getUser = () => {
+    const account = JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY));
+    return account ? account.korisnik : null;
+};
+
 const AuthService = {
     logIn: async (username, password) => {
         return await axios.post(`${constants.BASE_URL}/korisnici/auth/login`, {
@@ -20,26 +36,15 @@ const AuthService = {
         return await axios.post(`${constants.BASE_URL}/korisnici/`, userData, baseConfig);
     },
 
+    deleteAccount: async () => {
+        await axios.delete(`${constants.BASE_URL}/korisnici/${getUser().id}`, authConfig());
+        localStorage.clear();
+    },
+
     setAccount: (account) => localStorage.setItem(constants.ACCOUNT_KEY, JSON.stringify(account)),
 
     logOut: async () => {
         localStorage.clear();
-    },
-
-    getUser: () => {
-        const account = JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY));
-        return account ? account.user : null;
-    },
-
-    authConfig: () => {
-        console.log( JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY)))
-        const accessToken = JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY))?.accessToken;
-        return {
-            headers: {
-                ...baseConfig.headers,
-                'x-access-token': accessToken
-            }
-        };
     }
 };
 

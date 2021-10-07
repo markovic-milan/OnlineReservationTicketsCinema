@@ -5,3 +5,5 @@ export const PASSWORD_MISMATCH = "Lozinke se razlikuju."
 export const EMAIL_INVALID = "Format email adrese nije validan."
 export const REGISTRATION_ERROR = "Došlo je do greške prilikom registracije.";
 export const REGISTRATION_SUCCESS = "Registracija uspješna.";
+export const DELETE_ACCOUNT_ERROR = "Došlo je do greške prilikom brisanja naloga.";
+export const DELETE_ACCOUNT_SUCCESS = "Nalog je uspješno obrisan.";
