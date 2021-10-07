@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import './SearchBar.css'
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     const [keyword, setKeyword] = useState("");
+
+    const filterFilms = props.movies[0].filter((movie) =>{
+       return  movie.orginalniNaslov.toLowerCase().includes(keyword.toLowerCase())
+    })
+
 
     return <div className="searchbar-container">
         <div className="searchbar-wrapper">
