@@ -3,10 +3,23 @@ module.exports = (sequelize, DataTypes) =>{
         naziv: {
             type: DataTypes.STRING,
             allowNull: false,
+<<<<<<< HEAD
           },
         
     });
 
+=======
+        },
+        opis: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        vrijemePrikaza:
+        {
+            type: DataTypes.STRING, 
+            allowNull: false
+          },
+>>>>>>> newBranch02
 
     Sale.associate = (models)=>{
         Sale.hasMany(models.Sjedista, {
@@ -14,6 +27,16 @@ module.exports = (sequelize, DataTypes) =>{
         });
     };
 
+<<<<<<< HEAD
+=======
+    },
+    {
+        timestamps: false,
+        paranoid: true,
+        underscored: true,
+        freezeTableName: true
+    })
+>>>>>>> newBranch02
     return Sale
 
 };
