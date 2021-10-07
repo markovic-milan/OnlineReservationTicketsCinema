@@ -3,18 +3,6 @@ module.exports = (sequelize, DataTypes) =>{
         naziv: {
             type: DataTypes.STRING,
             allowNull: false,
-<<<<<<< HEAD
-        },
-          
-        
-    },
-    {
-        timestamps: false,
-        paranoid: true,
-        underscored: true,
-        freezeTableName: true
-    })
-=======
           },
         
     });
@@ -26,7 +14,6 @@ module.exports = (sequelize, DataTypes) =>{
         });
     };
 
->>>>>>> 687d5029a9bab922a4a2efff5b7625d2e271fdd6
     return Sale
 
 };

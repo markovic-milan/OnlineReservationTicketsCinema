@@ -4,6 +4,7 @@ import "./MovieInfo.css"
 import axios from 'axios';
 
 function MovieInfo(props) { 
+    console.log(props.movie.termini);
     const [film, setFilm] = useState({});
     const selectedSeats = [];
     var sum = 0;
@@ -15,13 +16,25 @@ function MovieInfo(props) {
             })
     },[]);
 
+       useEffect(()=> {
+            axios.get('http://localhost:3001/sjedista/1').then((resp) => {
+                setSjedista(resp.data);
+            })
+    },[]);
+
+      const [sjediste, setSjedista] = useState([]);
+
+
     useEffect(()=>{
         window.sessionStorage.setItem("id",film.id);
     },[film]);
 
     const seatHandler = (event) => {
+        if(event.target.innerHTML === "X"){
+           
+        }else{
         if(event.target.style.background === "rgb(3, 255, 221)"){
-             event.target.style.background="rgb(255, 255, 255)";
+             event.target.style.background="rgb(172, 255, 46)";
              const index = selectedSeats.indexOf(event.target.innerHTML);
             if(index > -1){
                 selectedSeats.splice(index, 1);
@@ -36,9 +49,11 @@ function MovieInfo(props) {
             
         }
         document.getElementById("seats-numbers").value = selectedSeats;
-    
+        }
     }
 
+    const isLoadedSeats = sjediste.length > 0;
+    const loaded = film.length > 0;
     return (
         <div className="movie-reservation-container">
             <div className="transparent-background">                
@@ -62,57 +77,20 @@ function MovieInfo(props) {
                     <div className="seats">
                         <div className="screen">Izaberite sjediste</div>
                     <div class="grid-container">
-                        <div class="grid-item"><button onClick={seatHandler}>1</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>2</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>3</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>4</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>5</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>6</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>7</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>8</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>9</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>10</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>11</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>12</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>13</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>14</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>15</button></div>
-                        <div class="grid-item"><button  onClick={seatHandler}>16</button></div>
-                        <div class="grid-item"><button  onClick={seatHandler}>17</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>18</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>19</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>20</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>21</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>22</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>23</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>24</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>25</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>26</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>27</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>28</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>29</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>30</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>31</button></div>                    
-                        <div class="grid-item"><button onClick={seatHandler}>32</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>33</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>34</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>35</button></div>
-                        <div class="grid-item"><button onClick={seatHandler}>36</button></div>
+                        {isLoadedSeats ? sjediste.map((sjediste)=>{if(sjediste.rezervisano){ return <div className="grid-item zauzeto"><button onClick={seatHandler} className="zauzeto">X</button></div>} else return <div className="grid-item slobodno"><button onClick={seatHandler}>{sjediste.id}</button></div>}): <span/>}
                         </div>
                     </div>
                     <div className="reservation-form">
                         <form action="/reservation">                          
                                 <label>Datum</label>
                                 <select id="date" name="date">
-                                    <option value="date1">4.10.2021.</option>
-                                    <option value="date1">5.10.2021.</option>
-                                    <option value="date1">6.10.2021.</option>
+                               <option value="date1">{film.datumPremijere}</option>
                                 </select>                   
                                 <label>Vrijeme</label>
                                 <select id="time" name="time">
-                                    <option value="time1">15:00</option>
-                                    <option value="time1">21:00</option>
-                                    <option value="time1">17:00</option>
+                    
+                                    {props.movie.termini.split(",").map((ter)=>{return <option value="time1">{ter}</option>})}
+
                                 </select>
                                 <label>Sala</label>
                                 <select id="sala" name="sala">
