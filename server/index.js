@@ -12,8 +12,7 @@ app.use(cors());
 const filmRouter = require('./routes/Filmovi');
 app.use("/filmovi", filmRouter)
 
-const saleRouter = require('./routes/Sale');
-app.use("/sale", saleRouter)
+
 
 const korisniciRouter = require('./routes/Korisnici');
 app.use("/korisnici", korisniciRouter)
@@ -24,6 +23,12 @@ app.use("/vrsteSjedista", vrsteSjedistaRouter)
 
 const kinoRouter = require('./routes/Kino');
 app.use("/kino", kinoRouter)
+
+const saleRouter = require('./routes/Sale')
+app.use("/sale", saleRouter);
+
+const sjedistaRouter = require('./routes/Sjedista')
+app.use("/sjedista", sjedistaRouter);
 
 db.sequelize.sync().then(()=>{
 app.listen(3001, ()=>{
