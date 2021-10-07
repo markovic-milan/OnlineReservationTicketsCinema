@@ -7,7 +7,7 @@ const SearchBar = () => {
     return <div className="searchbar-container">
         <div className="searchbar-wrapper">
             <div className="searchbar">
-                <input type="text" value="Pretraga" onChange={(e) => setKeyword(e.target.value)}/>
+                <input placeholder="Pretraži" type="text" value={keyword} onChange={(e) => setKeyword(e.target.value)}/>
             </div>
         </div>
         <button className="search-button">  

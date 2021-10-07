@@ -4,12 +4,12 @@ import axios from 'axios';
 import Slideshow from "../slideshow/Slideshow";
 import Flickity from 'flickity';
 
-const Content = () => {
-    const [filmovi,setFilmovi] = useState([]);
+const Content = (props) => {
+    // const [filmovi,setFilmovi] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:3001/filmovi').then((resp)=>{
-      setFilmovi(resp.data);
-      console.log("CONTENT:" + filmovi);
+    // axios.get('http://localhost:3001/filmovi').then((resp)=>{
+    //   setFilmovi(resp.data);
+    //   console.log("CONTENT:" + filmovi);
       var elem = document.querySelector('.carousel');
       var flkty = new Flickity( elem, {
         // options
@@ -19,13 +19,13 @@ const Content = () => {
         lazyLoad: 3
       });  
     });
-  },[])
+  // },[])
 
-const isLoaded = filmovi.length > 0;
+const isLoaded = props.filmovi.length > 0;
 
     return <div>
             <div className="movies-container">
-              {isLoaded ?  <Slideshow movies={filmovi} selected/> : <p>Loading...</p>}
+              {isLoaded ?  <Slideshow movies={props.filmovi} selected/> : <p>Loading...</p>}
             </div>                
     </div>
 }

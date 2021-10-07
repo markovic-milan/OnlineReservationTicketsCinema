@@ -2,10 +2,10 @@ import React from 'react';
 import Content from '../components/content/Content';
 
 
-function Pocetna() {
+function Pocetna(props) {
     return (
         <div className="content-container">
-            <Content />
+            <Content filmovi={props.filmovi}/>
         </div>
     )
 }
