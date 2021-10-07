@@ -90,26 +90,31 @@ router.post("/", async (req, res, next) => {
 });
 
 
-router.put("/:id", authJwt.verifyToken, async (req, res, next) => {
+router.put("/promjena-lozinke/:id", authJwt.verifyToken, async (req, res, next) => {
     try {
         const _id = req.params.id;
-        const korisnik = req.body;
+        const {lozinka, staraLozinka} = req.body;
 
-        if (!_id || !korisnik.ime || !korisnik.prezime || !korisnik.email || !korisnik.korisnicko_ime || !korisnik.lozinka) {
+        if (!_id || !lozinka || !staraLozinka) {
             throw new Error("Provjerite parametre.");
         }
 
-        if (await Korisnici.findOne({
+        const korisnik = await Korisnici.findOne({
             where: {
-                id: { [Op.ne]: _id },
-                korisnicko_ime: korisnik.korisnicko_ime
+                id: _id,
             }
-        }))
-            throw new Error("Korisnicko ime je vec zauzeto.");
+        });
 
-        const result = await Korisnici.update(korisnik, {
+        if (!validatePassword(staraLozinka, korisnik.lozinka))
+            throw new Error("Stara lozinka je pogrešna.");
+
+        const hash = hashPassword(lozinka);
+        const result = await Korisnici.update({
+            lozinka: hash
+        }, {
             where: { id: _id },
         });
+        
         res.json(result);
         next();
 

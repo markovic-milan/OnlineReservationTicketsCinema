@@ -41,6 +41,9 @@ const NavbarLogged = () => {
   };
 
 
+  const promjenaLozinke = async () => {
+    
+  }
 
   const brisanjeNaloga = async (event) => {
     try {
@@ -111,6 +114,7 @@ const NavbarLogged = () => {
                 <a>{korisnicko_ime}</a>
                 <div className="dropdown-content">
                   <a href="#">Rezervacije</a>
+                  <a onClick={promjenaLozinke}>Promjena lozinke</a>
                   <a onClick={submit}>Obriši nalog</a>
                 </div>
               </div>
