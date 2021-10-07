@@ -4,7 +4,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BOOLEAN,
         allowNull: false,
       },
-    });
+      
+    },  {
+      timestamps: false,
+      paranoid: true,
+      underscored: true,
+      freezeTableName: true
+  }
+    );
   
     return Sjedista;
   };

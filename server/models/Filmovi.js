@@ -1,7 +1,11 @@
 module.exports = (sequelize, DataTypes) =>{
+<<<<<<< HEAD
 
     const Filmovi = sequelize.define("Filmovi",{
 <<<<<<< HEAD
+=======
+    const Filmovi = sequelize.define("Filmovi", {
+>>>>>>> 6ac46e96c93b32cfe219882a08bb9cecb6082080
         orginalniNaslov: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -80,6 +84,14 @@ module.exports = (sequelize, DataTypes) =>{
         underscored: true,
         freezeTableName: true
     })
+
+    Filmovi.associate = (models)=>{
+        Filmovi.hasMany(models.Karte, {
+            onDelete: "cascade",
+        });
+    };
+    
+
     return Filmovi
 
 }

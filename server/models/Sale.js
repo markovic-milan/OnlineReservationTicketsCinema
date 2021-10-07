@@ -5,7 +5,14 @@ module.exports = (sequelize, DataTypes) =>{
             allowNull: false,
 <<<<<<< HEAD
           },
+          
         
+    },
+    {
+        timestamps: false,
+        paranoid: true,
+        underscored: true,
+        freezeTableName: true
     });
 
 =======

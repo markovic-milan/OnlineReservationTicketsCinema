@@ -30,6 +30,11 @@ app.use("/sale", saleRouter);
 const sjedistaRouter = require('./routes/Sjedista')
 app.use("/sjedista", sjedistaRouter);
 
+const karteRouter = require('./routes/Karte')
+app.use("/karte", karteRouter);
+
+
+
 db.sequelize.sync().then(()=>{
 app.listen(3001, ()=>{
     console.log("Server je pokrenut na portu 3001");
