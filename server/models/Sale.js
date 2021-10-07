@@ -10,13 +10,10 @@ module.exports = (sequelize, DataTypes) =>{
             type: DataTypes.STRING,
             allowNull: false,
         },
-        vrijemePrikaza:
-        {
-            type: DataTypes.STRING, 
-            allowNull: false
-       }
+          
         
-    },{
+    },
+    {
         timestamps: false,
         paranoid: true,
         underscored: true,

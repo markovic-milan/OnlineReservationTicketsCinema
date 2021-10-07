@@ -47,14 +47,14 @@ function MovieInfo(props) {
                         <img src={film.slika}/>
                     </div>
                     <div className="movie-text">
-                        <p>{film.orginalniNaslov}</p>
-                        <p>{film.termini}</p>
-                        <p>{film.zanr}</p>
-                        <p>{film.reziser}</p>
-                        <p>{film.glumci}</p>
-                        <p>{film.datumPremijere}</p>
-                        <p>{film.trajanjeFilma}</p>
-                        <p>{film.sadrzajFilma}</p>
+                     <p className="slova">Originalni naslov: {film.orginalniNaslov}</p>
+                        <p className="slova">Termini prikazivanja: {film.termini}</p>
+                        <p className="slova">Žanr: {film.zanr}</p>
+                        <p className="slova">Režiser: {film.reziser}</p>
+                        <p className="slova">Glumci: {film.glumci}</p>
+                        <p className="slova">Datum premijere: {film.datumPremijere}</p>
+                        <p className="slova">Trajanje filma: {film.trajanjeFilma}</p>
+                        <p className="slova">Sadržaj filma:  {film.sadrzajFilma}</p>
                     </div>
                 </div>
                 <div className="horizontal-fill"></div>
