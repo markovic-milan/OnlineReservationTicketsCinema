@@ -1,10 +1,9 @@
-
 .login-form-container {
     position: relative;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: .4rem;
     box-shadow: 1px 2px 11px dimgrey;
-    margin: auto auto;
+    margin: 7em auto 5em auto;
     width: 20rem;
     height: 21rem;
     padding: 2rem;
@@ -75,7 +74,7 @@
     background-color: blueviolet;
     box-shadow: 1px 1px 7px black;
     width: 100%;
-    cursor: pointer;   
+    cursor: pointer;
 }
 
 .login-button:hover {

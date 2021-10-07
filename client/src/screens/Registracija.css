@@ -3,10 +3,9 @@
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: .4rem;
     box-shadow: 1px 2px 11px dimgrey;
-    margin: auto auto;
+    margin: 7em auto auto auto;
     width: 30rem;
     padding: 2rem;
-    
 }
 
 .registration-form {
@@ -41,7 +40,7 @@
     color: black;
     background-color: white;
     margin-bottom: .5rem;
-    background:transparent;
+    background: transparent;
 }
 
 .form-input {
@@ -66,8 +65,8 @@
     background-color: blueviolet;
     box-shadow: 1px 1px 7px black;
     width: 50%;
-    cursor: pointer;  
-    align-self: center; 
+    cursor: pointer;
+    align-self: center;
 }
 
 .submit-button:hover {
