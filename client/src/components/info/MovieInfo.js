@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./MovieInfo.css";
-<<<<<<< HEAD
-import AuthService from "../../services/auth";
-import axios from "axios";
-import * as constants from "../../constants/constants";
-=======
 import * as constants from "../../constants/constants";
 import axios from "axios";
->>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
 
 function MovieInfo(props) {
   var reservation_container;
   var login_container;
-<<<<<<< HEAD
-=======
   if (JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY))) {
     reservation_container = "reservation-container-logged";
     login_container = "login-container-logged";
@@ -21,7 +13,6 @@ function MovieInfo(props) {
     reservation_container = "reservation-container";
     login_container = "login-container";
   }
->>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
 
   console.log(props.movie.termini);
   const [film, setFilm] = useState({});
@@ -69,72 +60,6 @@ function MovieInfo(props) {
       }
       document.getElementById("seats-numbers").value = selectedSeats;
     }
-<<<<<<< HEAD
-    document.getElementById("seats-numbers").value = selectedSeats;
-  };
-
-    const isLoadedSeats = sjediste.length > 0;
-    const loaded = film.length > 0;
-    return (
-        <div className="movie-reservation-container">
-            <div className="transparent-background">                
-                <div className="movie-info-container">
-                    <div className="movie-img">
-                        <img src={film.slika}/>
-                    </div>
-                    <div className="movie-text">
-                     <p className="slova">Originalni naslov: {film.orginalniNaslov}</p>
-                        <p className="slova">Termini prikazivanja: {film.termini}</p>
-                        <p className="slova">Žanr: {film.zanr}</p>
-                        <p className="slova">Režiser: {film.reziser}</p>
-                        <p className="slova">Glumci: {film.glumci}</p>
-                        <p className="slova">Datum premijere: {film.datumPremijere}</p>
-                        <p className="slova">Trajanje filma: {film.trajanjeFilma}</p>
-                        <p className="slova">Sadržaj filma:  {film.sadrzajFilma}</p>
-                    </div>
-                </div>
-                <div className="horizontal-fill"></div>
-                <div className={login_container}>
-                    <label>Za rezervaciju karata potrebno je da se prijavite!</label>
-                    <a className="prijava" href="/prijava">
-                        Prijava
-                    </a>
-                </div>
-                <div className={reservation_container}>
-                    <div className="seats">
-                        <div className="screen">Izaberite sjediste</div>
-                    <div class="grid-container">
-                        {isLoadedSeats ? sjediste.map((sjediste)=>{if(sjediste.rezervisano){ return <div className="grid-item zauzeto"><button onClick={seatHandler} className="zauzeto">X</button></div>} else return <div className="grid-item slobodno"><button onClick={seatHandler}>{sjediste.id}</button></div>}): <span/>}
-                        </div>
-                    </div>
-                    <div className="reservation-form">
-                        <form action="/reservation">                          
-                                <label>Datum</label>
-                                <select id="date" name="date">
-                               <option value="date1">{film.datumPremijere}</option>
-                                </select>                   
-                                <label>Vrijeme</label>
-                                <select id="time" name="time">
-                    
-                                    {props.movie.termini.split(",").map((ter)=>{return <option value="time1">{ter}</option>})}
-
-                                </select>
-                                <label>Sala</label>
-                                <select id="sala" name="sala">
-                                    <option value="sala1">Sala1</option>
-                                    <option value="sala1">Sala2</option>
-                                    <option value="sala1">Sala3</option>
-                                    <option value="sala1">Sala4</option>
-                                </select>
-                                <label>Pozicije</label>
-                                <input type="text" id="seats-numbers" name="seat-numbers" readOnly className="input-seat" ></input>
-                                <div className="prostor" id="ukupno">0.00 KM</div>
-                                <input type="submit" value="Potvrdi" className="button-submit"/>
-                        </form></div>
-                </div>
-            </div> 
-       </div>
-=======
   };
 
   const isLoadedSeats = sjediste.length > 0;
@@ -226,7 +151,6 @@ function MovieInfo(props) {
         </div>
       </div>
     </div>
->>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
   );
 }
 

@@ -11,10 +11,6 @@ import BottomNav from "./components/BottomNav/BottomNav";
 import Detalji from "./screens/Detalji";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-<<<<<<< HEAD
-import AuthService from "./services/auth.js";
-=======
->>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
 import * as constants from "./constants/constants";
 
 function App() {
@@ -46,18 +42,12 @@ function App() {
           <Switch>
             <Route path="/pocetna" exact component={Pocetna} />
             <Route path="/" exact component={Pocetna} />
-<<<<<<< HEAD
-            <Route path="/prijava" exact component={Prijava} />
-            <Route path="/registracija" exact component={Registracija} />
-=======
->>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
             <Route path="/sale" exact component={Sale} />
             <Route path="/filmovi/*" exact component={Detalji} />
           </Switch>
           <BottomNav />
           <ToastContainer hideProgressBar></ToastContainer>
         </div>
-        ;
       </Router>
     );
   }

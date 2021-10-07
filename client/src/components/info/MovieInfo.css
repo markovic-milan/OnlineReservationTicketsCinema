@@ -1,17 +1,4 @@
 .movie-reservation-container {
-<<<<<<< HEAD
-    display: flex;
-    flex-direction: column;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    background-image: url("./kino3.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    overflow: auto;
-=======
   display: flex;
   flex-direction: column;
   padding-left: 10%;
@@ -23,7 +10,6 @@
   background-attachment: fixed;
   background-size: cover;
   overflow: auto;
->>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
 }
 
 .transparent-background {
@@ -61,36 +47,6 @@
   word-wrap: break-word;
 }
 
-<<<<<<< HEAD
-.login-container-loged {
-    display: none;
-}
-
-.login-container {
-    display: block;
-    box-sizing: border-box;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.login-container>a.prijava {
-    color: blueviolet;
-    position: inherit;
-    font-size: 1.3rem;
-}
-
-.reservation-container {
-    display: none;
-}
-
-.reservation-container-loged {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-=======
 .reservation-container-logged {
   display: flex;
   box-sizing: border-box;
@@ -98,6 +54,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .reservation-container {
   display: none;
 }
@@ -114,11 +71,10 @@
   justify-content: center;
 }
 
-.login-container > a.prijava {
+.login-container>a.prijava {
   color: blueviolet;
   position: inherit;
   font-size: 1.3rem;
->>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
 }
 
 .reservation-form {
@@ -173,7 +129,7 @@
   overflow: hidden;
 }
 
-.grid-item > button {
+.grid-item>button {
   width: 100%;
   height: 100%;
   border: none;
@@ -197,8 +153,7 @@ label {
   border-radius: 5px;
 }
 
-.reservation-form select,
-.input-seat {
+.reservation-form select, .input-seat {
   width: 100%;
   height: 2em;
   background: rgba(255, 255, 255, 0.8);
