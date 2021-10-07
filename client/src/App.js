@@ -28,7 +28,12 @@ function App() {
         </Switch>
         <BottomNav/>
         <ToastContainer hideProgressBar></ToastContainer>
+<<<<<<< HEAD
       </div>
+=======
+        
+      </div>;
+>>>>>>> 687d5029a9bab922a4a2efff5b7625d2e271fdd6
     </Router>
 }
 
