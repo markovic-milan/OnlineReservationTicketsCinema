@@ -4,7 +4,6 @@ import "./MovieInfo.css"
 import axios from 'axios';
 
 function MovieInfo(props) { 
-    console.log(props.movie.termini);
     const [film, setFilm] = useState({});
     const selectedSeats = [];
     var sum = 0;
@@ -88,7 +87,6 @@ function MovieInfo(props) {
                                 </select>                   
                                 <label>Vrijeme</label>
                                 <select id="time" name="time">
-                    
                                     {props.movie.termini.split(",").map((ter)=>{return <option value="time1">{ter}</option>})}
 
                                 </select>
