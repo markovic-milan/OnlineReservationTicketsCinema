@@ -11,7 +11,6 @@ const Movie = (props) =>{
         param: props.movie
     }
 
-<<<<<<< HEAD
     return <Link to={o}>
                 <div className="movie-container">
                     <div className="movie-img-container">
@@ -36,25 +35,6 @@ const Movie = (props) =>{
                     </div>
                 </div>
             </Link>
-=======
-    return <div className="movie-container">
-            <div className="movie-img-container">
-                <img src={slika} alt="slika"></img>
-            </div>
-            <div className="movie-title-container">
-                <h3>{props.movie.orginalniNaslov}</h3>
-            </div>
-            <div className="movie-time-container">
-                <h3>{props.movie.datumPremijere}</h3>
-            </div>
-            <div className="movie-time-container">
-                <h3>{props.movie.termini}</h3>
-            </div>
-            <div className="movie-button-container">
-                <Link to={o}>Rezervisi</Link>
-            </div> 
-    </div>
->>>>>>> newBranch02
 }
 
 export default Movie;

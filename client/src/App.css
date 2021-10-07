@@ -19,7 +19,6 @@ html, body {
   width: 100%;
   height: 100%;
   background: rgb(226, 226, 226);
-  overflow: hidden;
 }
 
 #root {
@@ -33,12 +32,8 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 100%;
-<<<<<<< HEAD
   background-image: url('components/info/kino3.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;}
-=======
-  height: 100%;
+  background-size: cover;
 }
->>>>>>> newBranch02

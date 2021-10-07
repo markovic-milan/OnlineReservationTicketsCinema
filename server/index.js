@@ -8,6 +8,7 @@ const { authJwt } = require("./middleware");
 
 app.use(express.json());
 app.use(cors());
+app.use(express.urlencoded({ extended: true }))
 //Rute
 const filmRouter = require('./routes/Filmovi');
 app.use("/filmovi", filmRouter)
@@ -33,6 +34,8 @@ app.use("/sjedista", sjedistaRouter);
 const karteRouter = require('./routes/Karte')
 app.use("/karte", karteRouter);
 
+const rezervacijaRouter = require('./routes/Rezervacija')
+app.use("/rezervacija", rezervacijaRouter);
 
 
 db.sequelize.sync().then(()=>{

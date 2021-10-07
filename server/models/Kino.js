@@ -7,11 +7,6 @@ module.exports = (sequelize, DataTypes) =>{
         adresa:{
             type: DataTypes.STRING,
             allowNull: false,
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> newBranch02
         },
         email:{
             type:DataTypes.STRING,
@@ -21,27 +16,17 @@ module.exports = (sequelize, DataTypes) =>{
         brojTelefona:{
             type:DataTypes.STRING,
             allowNull:false,
-<<<<<<< HEAD
-          
-=======
          
->>>>>>> newBranch02
         },
         faxTelefon:{
             type:DataTypes.STRING,
             allowNull:false,
            
-<<<<<<< HEAD
-        }
-        
-    },{
-=======
           },
 
 
     },
     {
->>>>>>> newBranch02
         timestamps: false,
         paranoid: true,
         underscored: true,
