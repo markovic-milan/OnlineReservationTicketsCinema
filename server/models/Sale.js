@@ -1,6 +1,9 @@
 module.exports = (sequelize, DataTypes) =>{
     const Sale = sequelize.define("Sale", {
-        
+        naziv: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          },
         
     });
 
