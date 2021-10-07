@@ -7,6 +7,18 @@ function Slideshow(props) {
     // console.log("Slideshow: "+ props.movies.repertoar);
     const uskoroNiz = props.movies[1];
     const repertoarNiz = props.movies[0];
+
+    useEffect(()=>{
+        var elem = document.querySelector('.carousel');
+        var flkty = new Flickity( elem, {
+          // options
+          cellAlign: 'left',
+          contain: true,
+          freeScroll: true,
+          lazyLoad: 3
+        });  
+    },[]);
+
     useEffect(()=>{
           var elem = document.querySelector('.carousel1');
           var flkty = new Flickity( elem, {
