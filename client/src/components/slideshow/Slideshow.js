@@ -20,13 +20,13 @@ function Slideshow(props) {
     return (
         <div>
             <div className="carousel-container">
-                <h1>Repertoar</h1>
+                <h1 className="naslov">Repertoar</h1>
                  <div class='carousel'>
                     {repertoarNiz.map((movie)=>{ return <div class="carousel-cell"><Movie movie={movie}/></div>})}                   
                 </div>
             </div>
             <div className="carousel-container">
-                <h1>Uskoro</h1>      
+                <h1  className="naslov">Uskoro</h1>      
                 <div class='carousel1'>
                     {uskoroNiz.map((movie)=>{ return <div class="carousel-cell"><Movie movie={movie}/></div>})}                   
                 </div> 

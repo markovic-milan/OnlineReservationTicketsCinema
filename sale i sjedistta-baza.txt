@@ -1,0 +1,44 @@
+sale:
+dodati na putanju http://localhost:3001/Sale
+
+jedno po jedno:
+{
+	"id":1,
+	"naziv":"Sala 1"
+}
+
+
+{
+	"id":2
+	"naziv":"Sala 2"
+}
+{
+	"id":3
+	"naziv":"Sala 3"
+}
+
+
+===================================================
+dodavanje sjedista
+putanja: http://localhost:3001/Sjedista
+
+{
+	"id":1,
+	"rezervisano":0,
+	"SaleId":1
+}
+
+{
+	"id":2,
+	"rezervisano":0,
+	"SaleId":1
+}
+{
+	"id":3,
+	"rezervisano":0,
+	"SaleId":1
+}
+==================================================
+dobijanje liste sjedista u sali 1:
+
+get zahtjev na putanju http://localhost:3001/Sjedista/1

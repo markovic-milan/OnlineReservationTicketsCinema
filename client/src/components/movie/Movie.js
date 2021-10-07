@@ -29,7 +29,7 @@ const Movie = (props) =>{
                             })}
                         </div>) : <span/>}
                       
-                        <div className="movie-button-container"><p className="txt">Rezerviši</p></div> 
+                        <div className="movie-button-container"><p className="txt">Detalji</p></div> 
                     </div>
                 </div>
             </Link>

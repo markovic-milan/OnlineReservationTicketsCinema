@@ -25,7 +25,8 @@ function App() {
         </Switch>
         <BottomNav/>
         <ToastContainer hideProgressBar></ToastContainer>
-      </div>
+        
+      </div>;
     </Router>
 }
 

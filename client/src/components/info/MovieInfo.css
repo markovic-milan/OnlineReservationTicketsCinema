@@ -112,7 +112,7 @@
     height: 100%;
     border: none;
     cursor: pointer;
-    background: rgb(255, 255, 255);
+    background: transparent;
 }
 
 form {
@@ -153,7 +153,7 @@ label {
     font-weight: 600;
 }
 
-.button-submit:hover{
+.button-submit:hover {
     background: rgb(195, 90, 255);
     color: rgb(0, 0, 0);
 }
@@ -173,6 +173,22 @@ label {
     margin-top: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0px 0px 3px 1px grey;
+}
+
+.zauzeto {
+    cursor: not-allowed !important;
+    background: red !important;
+}
+
+.slobodno {
+    background: rgb(172, 255, 46) !important;
+}
+
+.slova {
+    padding: 0.5em;
+    text-decoration: solid;
+    font-size: 1.2em;
+    font-weight: bolder;
 }
 
 @media only screen and (max-width: 1010px) {
