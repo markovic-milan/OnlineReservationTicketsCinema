@@ -47,29 +47,29 @@ function Prijava() {
     };
 
     return (
-        <div className="login-form-container">
-            <form className="login-form" onSubmit={handleSubmit}>
-                <div className="form-field">
-                    <label htmlFor="username" className="form-label">Korisničko ime</label>
-                    <input type="text" id="username" value={username} className="form-input text-input"
-                        onChange={(e) => setUsername(e.target.value)} />
-                    <span>{errors.username}</span>
-                </div>
-                <div className="form-field">
-                    <label htmlFor="password" className="form-label">Lozinka</label>
-                    <input type="password" id="password" value={password} className="form-input text-input"
-                        onChange={(e) => setPassword(e.target.value)} />
-                    <span>{errors.password}</span>
-                </div>
-                {logInError &&
-                    <div class="error-message">
-                        Pogrešna lozinka ili korisničko ime
+            <div className="login-form-container">
+                <form className="login-form" onSubmit={handleSubmit}>
+                    <div className="form-field">
+                        <label htmlFor="username" className="form-label">Korisničko ime</label>
+                        <input type="text" id="username" value={username} className="form-input text-input"
+                            onChange={(e) => setUsername(e.target.value)} />
+                        <span>{errors.username}</span>
                     </div>
-                }
-                <br />
-                <input type="submit" name="LogIn" value="Log In" className="form-input login-button" />
-            </form>
-        </div>
+                    <div className="form-field">
+                        <label htmlFor="password" className="form-label">Lozinka</label>
+                        <input type="password" id="password" value={password} className="form-input text-input"
+                            onChange={(e) => setPassword(e.target.value)} />
+                        <span>{errors.password}</span>
+                    </div>
+                    {logInError &&
+                        <div class="error-message">
+                            Pogrešna lozinka ili korisničko ime
+                        </div>
+                    }
+                    <br />
+                    <input type="submit" name="LogIn" value="Prijava" className="form-input login-button" />
+                </form>
+            </div>     
     )
 }
 

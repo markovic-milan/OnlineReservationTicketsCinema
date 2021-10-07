@@ -1,8 +1,10 @@
 import React from "react";
 import SearchBar from "../searchbar/SearchBar";
 import './Navbar.css';
-
+import { useState } from 'react';
 const Navbar = () => {
+
+
 
     const MojStil = {
         stroke: 'rgb(167, 163, 204)', 

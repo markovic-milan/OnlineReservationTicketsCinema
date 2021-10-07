@@ -29,6 +29,7 @@ function App() {
             <Route path="/sale" exact component={Sale} />
             <Route path="/filmovi/*" exact component={Detalji} />
           </Switch>
+          <BottomNav />
           <ToastContainer hideProgressBar></ToastContainer>
         </div>
         ;
@@ -47,6 +48,7 @@ function App() {
             <Route path="/sale" exact component={Sale} />
             <Route path="/filmovi/*" exact component={Detalji} />
           </Switch>
+          <BottomNav />
           <ToastContainer hideProgressBar></ToastContainer>
         </div>
         ;

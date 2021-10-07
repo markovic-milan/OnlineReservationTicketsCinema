@@ -1,17 +1,15 @@
-
 .login-form-container {
     position: relative;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: .4rem;
     box-shadow: 1px 2px 11px dimgrey;
-    margin: auto auto;
+    margin: 7em auto auto auto;
     width: 20rem;
     height: 21rem;
     padding: 2rem;
 }
 
 .error-message {
-    background-color: white;
     text-align: center;
     color: red;
     font-size: 14px;
@@ -44,9 +42,8 @@
 }
 
 .form-label {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: black;
-    background-color: white;
     margin-bottom: .5rem;
 }
 
@@ -69,14 +66,14 @@
 }
 
 .login-button {
+    justify-content: center;
+    display: flex;
     height: 3rem;
     color: white;
     background-color: blueviolet;
     box-shadow: 1px 1px 7px black;
     width: 100%;
-    cursor: pointer;   
-    bottom: 3rem;
-    position: absolute;
+    cursor: pointer;
 }
 
 .login-button:hover {

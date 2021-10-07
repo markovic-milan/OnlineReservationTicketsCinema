@@ -28,7 +28,7 @@
     box-shadow: 0px 0px 0px 1px rgb(134, 129, 184);
 }
 
-input{
+.searchbar > input{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0); 
     width: 100%;

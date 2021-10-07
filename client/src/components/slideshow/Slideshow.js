@@ -4,7 +4,9 @@ import Movie from '../movie/Movie';
 import Flickity from 'flickity';
 
 function Slideshow(props) {
-
+    // console.log("Slideshow: "+ props.movies.repertoar);
+    const uskoroNiz = props.movies[1];
+    const repertoarNiz = props.movies[0];
     useEffect(()=>{
           var elem = document.querySelector('.carousel1');
           var flkty = new Flickity( elem, {
@@ -17,15 +19,19 @@ function Slideshow(props) {
       },[]);
     return (
         <div>
-        <div class='carousel'>
-            {props.movies.map((movie)=>{ return <div class="carousel-cell"><Movie movie={movie}/></div>})}                   
+            <div className="carousel-container">
+                <h1>Repertoar</h1>
+                 <div class='carousel'>
+                    {repertoarNiz.map((movie)=>{ return <div class="carousel-cell"><Movie movie={movie}/></div>})}                   
+                </div>
+            </div>
+            <div className="carousel-container">
+                <h1>Uskoro</h1>      
+                <div class='carousel1'>
+                    {uskoroNiz.map((movie)=>{ return <div class="carousel-cell"><Movie movie={movie}/></div>})}                   
+                </div> 
+            </div>
         </div>
-        <div>
-        <h1>Uskoro</h1>
-        </div>
-            <div class='carousel1'>
-            {props.movies.map((movie)=>{ return <div class="carousel-cell"><Movie movie={movie}/></div>})}                   
-        </div></div>
     )
 }
 

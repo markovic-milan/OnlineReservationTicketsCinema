@@ -5,10 +5,6 @@ import AuthService from "../../services/auth";
 import * as constants from "../../constants/constants";
 import axios from "axios";
 
-const obrisi = (id) => {
-  AuthService.remove(id);
-};
-
 const odjava = () => {
   AuthService.logOut();
 };
@@ -73,9 +69,7 @@ const NavbarLogged = () => {
                 <div class="dropdown-content">
                   <a href="/korisnici/projenaPodataka">Izmjena podataka</a>
                   <a href="#">Rezervacije</a>
-                  <a href="/>
-                    obrisi nalog
-                  </a>
+                  <a href="/">obrisi nalog</a>
                 </div>
               </div>
             </li>
