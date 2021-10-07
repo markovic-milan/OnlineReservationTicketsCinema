@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "../searchbar/SearchBar";
 import './Navbar.css';
 
-const Navbar = (props) => {
+const Navbar = () => {
     const MojStil = {
         stroke: 'rgb(167, 163, 204)', 
         fill: 'rgb(100, 100, 100)',
@@ -28,7 +28,6 @@ const Navbar = (props) => {
                 </svg>
                 </div>
                 <div className="filler1"></div>
-                <SearchBar filmovi={props.filmovi}/>  
                 <div className="filler2"></div>
                 <div className="link-container">
                     <ul>
