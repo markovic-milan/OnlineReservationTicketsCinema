@@ -1,4 +1,5 @@
 .movie-reservation-container {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     padding-left: 10%;
@@ -10,43 +11,57 @@
     background-attachment: fixed;
     background-size: cover;
     overflow: auto;
+=======
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  background-image: url("./kino3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+>>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
 }
 
 .transparent-background {
-    border-radius: 2em;
-    padding: 2rem;
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    background: rgba(121, 121, 121, 0.15);
+  border-radius: 2em;
+  padding: 2rem;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  background: rgba(121, 121, 121, 0.15);
 }
 
 .movie-info-container {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: row;
-    width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  width: 100%;
 }
 
 .movie-img {
-    float: left;
-    margin-right: 2rem;
+  float: left;
+  margin-right: 2rem;
 }
 
 .movie-img img {
-    border-radius: 1em;
-    height: 100%;
+  border-radius: 1em;
+  height: 100%;
 }
 
 .movie-text {
-    width: 100%;
-    padding: 1em;
-    background: rgba(56, 54, 54, 0.5);
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-    word-wrap: break-word;
+  width: 100%;
+  padding: 1em;
+  background: rgba(56, 54, 54, 0.5);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  word-wrap: break-word;
 }
 
+<<<<<<< HEAD
 .login-container-loged {
     display: none;
 }
@@ -75,156 +90,186 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+=======
+.reservation-container-logged {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.reservation-container {
+  display: none;
+}
+
+.login-container-logged {
+  display: none;
+}
+
+.login-container {
+  display: block;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container > a.prijava {
+  color: blueviolet;
+  position: inherit;
+  font-size: 1.3rem;
+>>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
 }
 
 .reservation-form {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding-left: 3rem;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 3rem;
 }
 
 .seats {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    border-radius: 20px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .screen {
-    display: flex;
-    font-style: italic;
-    font-weight: 900;
-    justify-content: center;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0.5em;
-    background: rgba(255, 255, 255, 0.7);
-    font-size: 1.2rem;
-    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.65);
+  display: flex;
+  font-style: italic;
+  font-weight: 900;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.65);
 }
 
 .grid-container {
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-gap: 10px;
-    justify-content: center;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-gap: 10px;
+  justify-content: center;
 }
 
 .grid-item {
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    overflow: hidden;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
 }
 
-.grid-item>button {
-    width: 100%;
-    height: 100%;
-    border: none;
-    cursor: pointer;
-    background: transparent;
+.grid-item > button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  background: transparent;
 }
 
 form {
-    width: 50%;
+  width: 50%;
 }
 
 label {
-    display: block;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: 1.2rem;
+  display: block;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
 }
 
 .reservation-form * {
-    margin: 5px;
-    border-radius: 5px;
+  margin: 5px;
+  border-radius: 5px;
 }
 
-.reservation-form select, .input-seat {
-    width: 100%;
-    height: 2em;
-    background: rgba(255, 255, 255, 0.8);
+.reservation-form select,
+.input-seat {
+  width: 100%;
+  height: 2em;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .input-seat {
-    display: block;
+  display: block;
 }
 
 .button-submit {
-    background: rgb(162, 0, 255);
-    border: none;
-    font-size: 1.5rem;
-    width: 100%;
-    box-shadow: 0px 0px 3px 1px rgb(255, 255, 255);
-    padding: 0.5em 0em;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    font-weight: 600;
+  background: rgb(162, 0, 255);
+  border: none;
+  font-size: 1.5rem;
+  width: 100%;
+  box-shadow: 0px 0px 3px 1px rgb(255, 255, 255);
+  padding: 0.5em 0em;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .button-submit:hover {
-    background: rgb(195, 90, 255);
-    color: rgb(0, 0, 0);
+  background: rgb(195, 90, 255);
+  color: rgb(0, 0, 0);
 }
 
 .prostor {
-    background: rgba(255, 255, 255, 0.8);
-    float: right;
-    padding: 0.1em;
-    text-align: right;
-    font-size: 1.8rem;
-    color: rgb(0, 0, 0);
+  background: rgba(255, 255, 255, 0.8);
+  float: right;
+  padding: 0.1em;
+  text-align: right;
+  font-size: 1.8rem;
+  color: rgb(0, 0, 0);
 }
 
 .horizontal-fill {
-    height: 3px;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0px 0px 3px 1px grey;
+  height: 3px;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 0px 3px 1px grey;
 }
 
 .zauzeto {
-    cursor: not-allowed !important;
-    background: red !important;
+  cursor: not-allowed !important;
+  background: red !important;
 }
 
 .slobodno {
-    background: rgb(172, 255, 46) !important;
+  background: rgb(172, 255, 46) !important;
 }
 
 .slova {
-    padding: 0.5em;
-    text-decoration: solid;
-    font-size: 1.2em;
-    font-weight: bolder;
+  padding: 0.5em;
+  text-decoration: solid;
+  font-size: 1.2em;
+  font-weight: bolder;
 }
 
 @media only screen and (max-width: 1010px) {
-    .reservation-container {
-        flex-direction: column;
-    }
-    .reservation-form {
-        padding-left: 0;
-    }
-    .movie-info-container {
-        flex-direction: column;
-    }
-    .movie-text {
-        width: 95%;
-        margin-top: 2em;
-    }
+  .reservation-container-logged {
+    flex-direction: column;
+  }
+  .reservation-form {
+    padding-left: 0;
+  }
+  .movie-info-container {
+    flex-direction: column;
+  }
+  .movie-text {
+    width: 95%;
+    margin-top: 2em;
+  }
 }

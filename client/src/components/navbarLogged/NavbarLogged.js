@@ -65,7 +65,11 @@ const NavbarLogged = () => {
             </li>
             <li>
               <div class="dropdown">
+<<<<<<< HEAD
                 <button class="dropbtn">{korisnicko_ime}</button>
+=======
+                <a>{korisnicko_ime}</a>
+>>>>>>> a93600ef5555c5650f238de98d2776ea307981c2
                 <div class="dropdown-content">
                   <a href="/korisnici/projenaPodataka">Izmjena podataka</a>
                   <a href="#">Rezervacije</a>
