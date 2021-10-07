@@ -2,14 +2,57 @@ import React from "react";
 import SearchBar from "../searchbar/SearchBar";
 import "./NavbarLogged.css";
 import AuthService from "../../services/auth";
+import * as messages from "../../constants/messages";
 import * as constants from "../../constants/constants";
-import axios from "axios";
-
-const odjava = () => {
-  AuthService.logOut();
-};
+import { ToastContainer, toast, Slide } from "react-toastify";
+import { useHistory } from 'react-router';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 const NavbarLogged = () => {
+  const history = useHistory();
+
+  const odjava = () => {
+    AuthService.logOut();
+  };
+
+  const toastConfig = {
+    position: "top-right",
+    autoClose: 5000,
+    closeOnClick: true,
+    hideProgressBar: true
+  };
+
+  const submit = () => {
+    confirmAlert({
+      title: 'Brisanje naloga',
+      message: 'Da li ste sigurni da želite obrisati nalog?',
+      buttons: [
+        {
+          label: 'Da',
+          onClick: () => brisanjeNaloga()
+        },
+        {
+          label: 'Ne',
+          onClick: () => {}
+        }
+      ]
+    });
+  };
+
+
+
+  const brisanjeNaloga = async (event) => {
+    try {
+      await AuthService.deleteAccount();
+      toast.info(messages.DELETE_ACCOUNT_SUCCESS);
+      history.push("/pocetna");
+      window.location.reload();
+    } catch (error) {
+      toast.error(error.response?.data ?? messages.DELETE_ACCOUNT_ERROR, toastConfig);
+    }
+  }
+
   const { korisnik: korisnik } = JSON.parse(
     localStorage.getItem(constants.ACCOUNT_KEY)
   );
@@ -64,12 +107,11 @@ const NavbarLogged = () => {
               <a href="/sale">Sale</a>
             </li>
             <li>
-              <div class="dropdown">
+              <div className="dropdown">
                 <a>{korisnicko_ime}</a>
-                <div class="dropdown-content">
-                  <a href="/korisnici/projenaPodataka">Izmjena podataka</a>
+                <div className="dropdown-content">
                   <a href="#">Rezervacije</a>
-                  <a href="/">obrisi nalog</a>
+                  <a onClick={submit}>Obriši nalog</a>
                 </div>
               </div>
             </li>
