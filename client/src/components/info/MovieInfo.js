@@ -116,18 +116,18 @@ function MovieInfo(props) {
                                 </select>
                                 <label>Sala</label>
                                 <select id="sala" name="sala">
-                                    <option value="sala1">sala1</option>
-                                    <option value="sala1">sala2</option>
-                                    <option value="sala1">sala3</option>
+                                    <option value="sala1">Sala1</option>
+                                    <option value="sala1">Sala2</option>
+                                    <option value="sala1">Sala3</option>
+                                    <option value="sala1">Sala4</option>
                                 </select>
                                 <label>Pozicije</label>
                                 <input type="text" id="seats-numbers" name="seat-numbers" readOnly className="input-seat" ></input>
                                 <div className="prostor" id="ukupno">0.00 KM</div>
                                 <input type="submit" value="Potvrdi" className="button-submit"/>
-                                            </form></div>
+                        </form></div>
                 </div>
             </div> 
-        
        </div>
     )
 }
