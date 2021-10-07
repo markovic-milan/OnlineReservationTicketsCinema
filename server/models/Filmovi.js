@@ -1,6 +1,5 @@
 module.exports = (sequelize, DataTypes) =>{
-
-    const Filmovi = sequelize.define("Filmovi",{
+    const Filmovi = sequelize.define("Filmovi", {
         orginalniNaslov: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -53,6 +52,14 @@ module.exports = (sequelize, DataTypes) =>{
         underscored: true,
         freezeTableName: true
     })
+
+    Filmovi.associate = (models)=>{
+        Filmovi.hasMany(models.Karte, {
+            onDelete: "cascade",
+        });
+    };
+    
+
     return Filmovi
 
 }

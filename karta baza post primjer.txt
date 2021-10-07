@@ -1,0 +1,12 @@
+{
+	"ukupanIznos":15,
+	"brojSjedista":3,
+	"FilmoviId":1,
+	"KorisniciId":1
+}
+putanja : http://localhost:3001/karte
+
+================================
+vidjeti karte korisnika sa id=1
+
+putanja: http://localhost:3001/karte/1
