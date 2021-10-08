@@ -36,8 +36,8 @@ function Prijava() {
             try {
                 const account = await AuthService.logIn(username, password);
                 AuthService.setAccount(account.data);
-                window.location.reload();
                 history.push("/pocetna");
+                window.location.reload();
             } catch (error) {
                 setLogInError(true);
             }
@@ -62,7 +62,7 @@ function Prijava() {
                         <span>{errors.password}</span>
                     </div>
                     {logInError &&
-                        <div class="error-message">
+                        <div className="error-message">
                             Pogrešna lozinka ili korisničko ime
                         </div>
                     }
