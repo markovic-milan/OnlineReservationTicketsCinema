@@ -24,14 +24,13 @@ app.use("/vrsteSjedista", vrsteSjedistaRouter)
 const kinoRouter = require('./routes/Kino');
 app.use("/kino", kinoRouter)
 
-const saleRouter = require('./routes/Sale')
-app.use("/sale", saleRouter);
 
-const sjedistaRouter = require('./routes/Sjedista')
-app.use("/sjedista", sjedistaRouter);
+const saleRouter = require('./routes/Sale');
+app.use("/sale", saleRouter)
 
-const karteRouter = require('./routes/Karte')
-app.use("/karte", karteRouter);
+const sjedistaRouter = require('./routes/Sjedista');
+app.use("/sjedista", sjedistaRouter)
+
 
 
 
