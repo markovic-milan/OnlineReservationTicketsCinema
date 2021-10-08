@@ -94,6 +94,8 @@ router.put("/promjena-lozinke/:id", authJwt.verifyToken, async (req, res, next) 
     try {
         const _id = req.params.id;
         const {lozinka, staraLozinka} = req.body;
+        const error = new Error();
+        error.code = 400;
 
         if (!_id || !lozinka || !staraLozinka) {
             throw new Error("Provjerite parametre.");
@@ -105,8 +107,10 @@ router.put("/promjena-lozinke/:id", authJwt.verifyToken, async (req, res, next) 
             }
         });
 
-        if (!validatePassword(staraLozinka, korisnik.lozinka))
-            throw new Error("Stara lozinka je pogrešna.");
+        if (!validatePassword(staraLozinka, korisnik.lozinka)) {
+            error.message = "Stara lozinka je pogrešna.";
+            throw error;
+        }
 
         const hash = hashPassword(lozinka);
         const result = await Korisnici.update({
@@ -120,6 +124,7 @@ router.put("/promjena-lozinke/:id", authJwt.verifyToken, async (req, res, next) 
 
 
     } catch (error) {
+        res.status(400).send(error.message);
         next(error);
     }
 

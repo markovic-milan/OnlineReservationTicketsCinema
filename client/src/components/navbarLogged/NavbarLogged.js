@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchBar from "../searchbar/SearchBar";
 import "./NavbarLogged.css";
 import AuthService from "../../services/auth";
@@ -8,8 +8,12 @@ import { ToastContainer, toast, Slide } from "react-toastify";
 import { useHistory } from 'react-router';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import Modal from "../modal/modal";
 
 const NavbarLogged = () => {
+  const [show, setShow] = useState(false);
+
+
   const history = useHistory();
 
   const odjava = () => {
@@ -34,7 +38,7 @@ const NavbarLogged = () => {
         },
         {
           label: 'Ne',
-          onClick: () => {}
+          onClick: () => { }
         }
       ]
     });
@@ -42,7 +46,7 @@ const NavbarLogged = () => {
 
 
   const promjenaLozinke = async () => {
-    
+    setShow(true);
   }
 
   const brisanjeNaloga = async (event) => {
@@ -74,8 +78,14 @@ const NavbarLogged = () => {
     opacity: 1,
   };
 
+  const close = () => {
+    setShow(false);
+  }
+
   return (
     <nav className="nav-container">
+      <Modal show={show} handleClose={close}>
+      </Modal>
       <div className="navbar">
         <div className="logo-container">
           <svg

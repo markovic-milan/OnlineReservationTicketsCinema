@@ -7,3 +7,5 @@ export const REGISTRATION_ERROR = "Došlo je do greške prilikom registracije.";
 export const REGISTRATION_SUCCESS = "Registracija uspješna.";
 export const DELETE_ACCOUNT_ERROR = "Došlo je do greške prilikom brisanja naloga.";
 export const DELETE_ACCOUNT_SUCCESS = "Nalog je uspješno obrisan.";
+export const PASSWORD_CHANGE_ERROR = "Došlo je do greške prilikom promjene lozinke.";
+export const PASSWORD_CHANGE_SUCCESS = "Lozinka je uspješno promijenjena.";
