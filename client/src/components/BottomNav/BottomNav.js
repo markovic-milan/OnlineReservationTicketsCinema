@@ -1,4 +1,3 @@
-
 import './BottomNav.css';
 import React from 'react';
 import axios from "axios";
@@ -24,9 +23,9 @@ function BottomNav() {
               </div>
           </div>
 
-          {listOfKina.map((value,key)=>{
+          {listOfKina.map((value)=>{
             return(
-              <div className="rightSide">
+              <div key={value.id} className="rightSide">
                   <div className="container">
                       <p className="adresa"> Adresa: {value.adresa}</p> 
                       <p className="email"> Email: {value.email}</p> 

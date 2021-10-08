@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) =>{
 
 
-    const Kino = sequelize.define("Kino",{
+    const Kino = sequelize.define("Kino",
+    {
 
         adresa:{
             type: DataTypes.STRING,
             allowNull: false,
-        
         },
         email:{
             type:DataTypes.STRING,
@@ -16,15 +16,17 @@ module.exports = (sequelize, DataTypes) =>{
         brojTelefona:{
             type:DataTypes.STRING,
             allowNull:false,
-          
+         
         },
         faxTelefon:{
             type:DataTypes.STRING,
             allowNull:false,
            
-        }
-        
-    },{
+          },
+
+
+    },
+    {
         timestamps: false,
         paranoid: true,
         underscored: true,

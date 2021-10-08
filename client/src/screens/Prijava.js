@@ -36,9 +36,9 @@ function Prijava() {
             try {
                 const account = await AuthService.logIn(username, password);
                 AuthService.setAccount(account.data);
+                window.location.reload();
                 history.push("/pocetna");
             } catch (error) {
-                console.log('dada')
                 setLogInError(true);
             }
         } else {

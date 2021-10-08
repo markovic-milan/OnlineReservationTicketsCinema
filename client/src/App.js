@@ -31,7 +31,6 @@ function App() {
           <BottomNav />
           <ToastContainer hideProgressBar></ToastContainer>
         </div>
-        ;
       </Router>
     );
   } else {

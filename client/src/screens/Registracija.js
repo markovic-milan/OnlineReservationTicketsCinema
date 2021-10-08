@@ -77,8 +77,9 @@ function Registracija() {
                 };
                 const account = await AuthService.register(newUser);
                 AuthService.setAccount(account.data);
-                toast.info(messages.REGISTRATION_SUCCESS, toastConfig);
+                window.location.reload();
                 history.push("/pocetna");
+                toast.info(messages.REGISTRATION_SUCCESS, toastConfig);
             } catch (error) {
                 toast.error(error.response?.data ?? messages.REGISTRATION_ERROR, toastConfig);
             }

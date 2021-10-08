@@ -25,18 +25,18 @@ putanja: http://localhost:3001/Sjedista
 {
 	"id":1,
 	"rezervisano":0,
-	"SaleId":1
+	"sale_id":1
 }
 
 {
 	"id":2,
 	"rezervisano":0,
-	"SaleId":1
+	"sale_id":1
 }
 {
 	"id":3,
 	"rezervisano":0,
-	"SaleId":1
+	"sale_id":1
 }
 ==================================================
 dobijanje liste sjedista u sali 1:

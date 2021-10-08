@@ -1,5 +1,9 @@
+
+NA PUTANJU /filmovi/uskoro/:id
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 {
-    "id": 1,
+    "id": 111,
     "orginalniNaslov": "Iza rešetaka ",
     "reziser": "Joe Carnahan",
     "glumci": "Gerard Butler, Frank Grillo, Toby Huss",
@@ -10,7 +14,7 @@
     "slika": "/images/copsshop.png"
 },
 {
-    "id": 2,
+    "id": 112,
     "orginalniNaslov": "Venom: Let There Be Carnage",
     "reziser": "Andy Serkis",
     "glumci": "Tom Hardy, Woody Harrelson, Michelle Williams, Reid Scott, Naomie Harris",
@@ -21,7 +25,7 @@
     "slika": "/images/venom.jpg"
 },
 {
-    "id": 3,
+    "id": 113,
     "orginalniNaslov": "Dune (2021)",
     "reziser": "Denis Villeneuve",
     "glumci": "Rebecca Ferguson, Timothée Chalamet, Zendaya",
@@ -32,7 +36,7 @@
     "slika": "/images/dune.jpg"
 },
 {
-    "id": 4,
+    "id": 114,
     "orginalniNaslov": "Posljednji dvoboj (2021)",
     "reziser": "Ridley Scott",
     "glumci": "Matt Damon, Ben Affleck, Adam Driver, Jodie Comer",
@@ -43,7 +47,7 @@
     "slika": "/images/duel.jpg"
 },
 {
-    "id": 5,
+    "id": 115,
     "orginalniNaslov": "Božiji čovjek (2021)",
     "reziser": "Jelena Popovic",
     "glumci": "Mickey Rourke, Alexander Petrov, Aris Servetalis",
@@ -54,7 +58,7 @@
     "slika": "/images/covek.jpg"
 },
 {
-    "id": 6,
+    "id": 116,
     "orginalniNaslov": "Ron’s Gone Wrong (2021)",
     "reziser": " Sarah Smith, Jean-Philippe Vine, Octavio E. Rodriguez",
     "glumci": "sin",

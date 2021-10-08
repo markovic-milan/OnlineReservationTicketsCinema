@@ -7,8 +7,12 @@ import { Link } from "react-router-dom";
 
 
 function MovieInfo(props) {
+  console.log("MOVIE INFO" + props.movie);
   var reservation_container;
   var login_container;
+  const [sjediste, setSjedista] = useState([]);
+  const [film, setFilm] = useState({id:-1});
+
   if (JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY))) {
     reservation_container = "reservation-container-logged";
     login_container = "login-container-logged";
@@ -17,32 +21,32 @@ function MovieInfo(props) {
     login_container = "login-container";
   }
 
-  console.log(props.movie.termini);
-  const [film, setFilm] = useState({});
+  if(film!==null && film.termini === undefined){
+      reservation_container = "reservation-container-uskoro";
+      login_container = "reservation-container-uskoro";
+  }
+
   const selectedSeats = [];
   var sum = 0;
-  var id =
-    props.movie === undefined
-      ? window.sessionStorage.getItem("id")
-      : props.movie.id;
-
+  const id = props.movie;
   useEffect(() => {
-    axios.get(`http://localhost:3001/filmovi/${id}`).then((resp) => {
-      setFilm(resp.data);
-    });
+    if(id>100){
+      axios.get(`http://localhost:3001/filmovi/uskoro/${id}`).then((resp) => {
+        setFilm(resp.data);
+        console.log("DATA" + resp.data);
+      });}
+    else{
+        axios.get(`http://localhost:3001/filmovi/${id}`).then((resp) => {
+        setFilm(resp.data);
+        console.log("DATA" + resp.data);
+        })}
   }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/sjedista/1").then((resp) => {
+    axios.get("http://localhost:3001/Sjedista/1").then((resp) => {
       setSjedista(resp.data);
     });
   }, []);
-
-  const [sjediste, setSjedista] = useState([]);
-
-  useEffect(() => {
-    window.sessionStorage.setItem("id", film.id);
-  }, [film]);
 
   const seatHandler = (event) => {
     if (event.target.innerHTML === "X") {
@@ -64,12 +68,12 @@ function MovieInfo(props) {
       document.getElementById("seats-numbers").value = selectedSeats;
     }
   };
-
   const isLoadedSeats = sjediste.length > 0;
-  const loaded = film.length > 0;
+const isLoaded = film.id !== -1;
   return (
+    
     <div className="movie-reservation-container">
-      <div className="transparent-background">
+      {isLoaded ? ( <div className="transparent-background">
         <div className="movie-info-container">
           <div className="movie-img">
             <img src={film.slika} />
@@ -119,24 +123,25 @@ function MovieInfo(props) {
             </div>
           </div>
           <div className="reservation-form">
-            <form action="/reservation">
+            <form action="http://localhost:3001/rezervacija" method="post" enctype="application/json">
               <label>Datum</label>
               <select id="date" name="date">
                 <option value="date1">{film.datumPremijere}</option>
               </select>
               <label>Vrijeme</label>
               <select id="time" name="time">
-                {props.movie.termini.split(",").map((ter) => {
+                {id < 100 ? film.termini.split(",").map((ter) => {
                   return <option value="time1">{ter}</option>;
-                })}
+                }) : <span/>}
               </select>
-              <label>Sala</label>
-              <select id="sala" name="sala">
+              <label>Broj računa</label>
+              <input type="text" name="racun" className="input-seat" maxLength="12" minLength="12"/>
+              {/* <select id="sala" name="sala">
                 <option value="sala1">Sala1</option>
                 <option value="sala1">Sala2</option>
                 <option value="sala1">Sala3</option>
                 <option value="sala1">Sala4</option>
-              </select>
+              </select> */}
               <label>Pozicije</label>
               <input
                 type="text"
@@ -150,11 +155,13 @@ function MovieInfo(props) {
               </div>
               
               <input type="submit" value="Potvrdi" className="button-submit" />
-             
+
+              <input type="hidden" name="filmId" value={props.movie.id} />
             </form>
           </div>
         </div>
-      </div>
+      </div>):<span/>}
+     
     </div>
   );
 }
