@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) =>{
+module.exports = (sequelize, DataTypes) => {
     const Korisnici = sequelize.define("Korisnici", {
         korisnicko_ime: {
             type: DataTypes.STRING,
@@ -19,20 +19,11 @@ module.exports = (sequelize, DataTypes) =>{
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-         }
-        
-    },{
-        timestamps: false,
+        }
+    }, {
         paranoid: true,
-        underscored: true,
-        freezeTableName: true
-    })
-
-    Korisnici.associate = (models)=>{
-        Korisnici.hasMany(models.Karte, {
-            onDelete: "cascade",
-        });
-    };
+        timestamps: true,
+    });
 
     return Korisnici;
 };

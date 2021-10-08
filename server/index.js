@@ -9,27 +9,27 @@ const { authJwt } = require("./middleware");
 app.use(express.json());
 app.use(cors());
 //Rute
-const filmRouter = require('./routes/Filmovi');
-app.use("/filmovi", filmRouter)
+const filmRouter = require('./routes/Filmovi')
+app.use("/filmovi", filmRouter);
 
 
 
-const korisniciRouter = require('./routes/Korisnici');
-app.use("/korisnici", korisniciRouter)
+const korisniciRouter = require('./routes/Korisnici')
+app.use("/korisnici", korisniciRouter);
 
 
-const vrsteSjedistaRouter = require('./routes/VrsteSjedista');
-app.use("/vrsteSjedista", vrsteSjedistaRouter)
+const vrsteSjedistaRouter = require('./routes/VrsteSjedista')
+app.use("/vrsteSjedista", vrsteSjedistaRouter);
 
-const kinoRouter = require('./routes/Kino');
-app.use("/kino", kinoRouter)
+const kinoRouter = require('./routes/Kino')
+app.use("/kino", kinoRouter);
 
 
-const saleRouter = require('./routes/Sale');
-app.use("/sale", saleRouter)
+const saleRouter = require('./routes/Sale')
+app.use("/sale", saleRouter);
 
-const sjedistaRouter = require('./routes/Sjedista');
-app.use("/sjedista", sjedistaRouter)
+const sjedistaRouter = require('./routes/Sjedista')
+app.use("/sjedista", sjedistaRouter);
 
 
 

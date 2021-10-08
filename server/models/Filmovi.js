@@ -53,12 +53,6 @@ module.exports = (sequelize, DataTypes) =>{
         freezeTableName: true
     })
 
-    Filmovi.associate = (models)=>{
-        Filmovi.hasMany(models.Karte, {
-            onDelete: "cascade",
-        });
-    };
-    
 
     return Filmovi
 
