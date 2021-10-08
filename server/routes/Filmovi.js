@@ -19,8 +19,11 @@ router.get('/', async (req, res)=>{
 });
 
 router.get('/:id', async (req, res)=>{
-  await Filmovi.findByPk(req.params.id).then((film)=>{ return res.json(film)})
-  // await Filmovi.findById(req.params.id).then((film)=>{return res.json(film)});    
+  await Filmovi.findByPk(req.params.id).then((film)=>{ return res.json(film)})  
+});
+
+router.get('/uskoro/:id', async (req, res)=>{
+  await Uskoro.findByPk(req.params.id).then((film)=>{ return res.json(film)})  
 });
 
 router.post("/", async (req, res) => {
