@@ -67,7 +67,7 @@ return <Router>
             <NavbarLogged  updateData={filterFilm}/>
             <Switch>
               <Route path="/pocetna" exact><Pocetna data={filmovi}/></Route>
-              <Route path="/" exact component={Pocetna} />
+                <Route path="/" exact><Pocetna data={filmovi}/></Route>
               <Route path="/sale" exact component={Sale} />
               <Route path="/filmovi/*" exact component={Detalji} />
             </Switch>
@@ -79,7 +79,7 @@ return <Router>
           <Navbar updateData={filterFilm}/>
             <Switch>
             <Route path="/pocetna" exact><Pocetna data={filmovi}/></Route>
-              <Route path="/" exact component={Pocetna} />
+                <Route path="/" exact><Pocetna data={filmovi}/></Route>
               <Route path="/prijava" exact component={Prijava} />
               <Route path="/registracija" exact component={Registracija} />
               <Route path="/sale" exact component={Sale} />
