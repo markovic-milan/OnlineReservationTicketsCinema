@@ -21,11 +21,6 @@ module.exports = (sequelize, DataTypes) =>{
             allowNull: false,
          }
         
-    },{
-        timestamps: true,
-        paranoid: true,
-        underscored: true,
-        freezeTableName: true
     })
 
     Korisnici.associate = (models)=>{

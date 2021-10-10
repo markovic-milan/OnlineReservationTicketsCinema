@@ -10,7 +10,7 @@ import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 import Modal from "../modal/modal";
 
-const NavbarLogged = () => {
+const NavbarLogged = (props) => {
   const [show, setShow] = useState(false);
 
 
@@ -109,7 +109,7 @@ const NavbarLogged = () => {
           </svg>
         </div>
         <div className="filler1"></div>
-        <SearchBar />
+        <SearchBar updateData={props.updateData}/>
         <div className="filler2"></div>
         <div className="link-container">
           <ul>

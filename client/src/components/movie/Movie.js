@@ -11,7 +11,8 @@ const Movie = (props) =>{
     }
 
     return <Link to={o}>
-                <div className="movie-container">
+        <div className="movie-wrapper">
+                            <div className="movie-container">
                     <div className="movie-img-container">
                         <img src={props.movie.slika} alt=""></img>
                     </div>
@@ -33,6 +34,8 @@ const Movie = (props) =>{
                         <div className="movie-button-container"><p className="txt">Detalji</p></div> 
                     </div>
                 </div>
+        </div>
+
             </Link>
 }
 

@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './SearchBar.css'
 
 const SearchBar = (props) => {
     const [keyword, setKeyword] = useState("");
 
-    // const filterFilms = props.movies[0].filter((movie) =>{
-    //    return  movie.orginalniNaslov.toLowerCase().includes(keyword.toLowerCase())
-    // })
-
+    useEffect(() => {
+        props.updateData(keyword);
+    }, [keyword]);
 
     return <div className="searchbar-container">
         <div className="searchbar-wrapper">
             <div className="searchbar">
-                <input type="text" value="Pretraga" onChange={(e) => setKeyword(e.target.value)}/>
+                <input type="text" placeholder="Pretraži..." value={keyword} onChange={(e) => setKeyword(e.target.value)}/>
             </div>
         </div>
         <button className="search-button">  
