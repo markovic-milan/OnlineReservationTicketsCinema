@@ -6,7 +6,7 @@ const SearchBar = (props) => {
 
     // const filterFilms = props.movies[0].filter((movie) =>{
     //    return  movie.orginalniNaslov.toLowerCase().includes(keyword.toLowerCase())
-    // })
+    //  })
 
 
     return <div className="searchbar-container">
