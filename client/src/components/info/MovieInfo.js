@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./MovieInfo.css";
 import * as constants from "../../constants/constants";
 import axios from "axios";
-import { Link } from "react-router-dom";
-
-
+import Registracija from "../../screens/Registracija";
 
 function MovieInfo(props) {
   console.log("MOVIE INFO" + props.movie);
@@ -153,9 +151,7 @@ const isLoaded = film.id !== -1;
               <div className="prostor" id="ukupno">
                 0.00 KM
               </div>
-              
               <input type="submit" value="Potvrdi" className="button-submit" />
-
               <input type="hidden" name="filmId" value={props.movie.id} />
             </form>
           </div>
