@@ -123,14 +123,21 @@ li:hover>a {
     border-radius: 5px;
     cursor: pointer;
 }
+.naziv{
+    font-family: cursive;
+    color: blueviolet;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding:0em 1em 0em 1em;
+}
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 930px) {
     .link-container ul {
         display: none;
     }
 }
 
-@media all and (min-width: 801px) {
+@media all and (min-width: 931px) {
     .hamburger {
         display: none;
     }

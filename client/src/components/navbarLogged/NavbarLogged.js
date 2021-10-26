@@ -135,6 +135,7 @@ const NavbarLogged = (props) => {
             </g>
           </svg>
         </div>
+        <p className="naziv">SmartCinema</p>
         <div className="filler1"></div>
         <SearchBar updateData={props.updateData} />
         <div className="filler2"></div>

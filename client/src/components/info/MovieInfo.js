@@ -10,9 +10,14 @@ function MovieInfo(props) {
   var login_container;
   const [film, setFilm] = useState({ id: -1 });
 
+  const korisnik = {id:-1};
+
+console.log(JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY)));
+
   if (JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY))) {
     reservation_container = "reservation-container-logged";
     login_container = "login-container-logged";
+    korisnik.id=JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY)).korisnik.id;
   } else {
     reservation_container = "reservation-container";
     login_container = "login-container";
@@ -28,20 +33,13 @@ function MovieInfo(props) {
     if (id > 100) {
       axios.get(`http://localhost:3001/filmovi/uskoro/${id}`).then((resp) => {
         setFilm(resp.data);
-        console.log("DATA" + resp.data);
       });
     } else {
       axios.get(`http://localhost:3001/filmovi/${id}`).then((resp) => {
         setFilm(resp.data);
-        console.log("DATA" + resp.data);
       });
     }
   }, []);
-
-
-  const { korisnik: korisnik } = JSON.parse(
-    localStorage.getItem(constants.ACCOUNT_KEY)
-  );
 
   function handleSubmit(event){
     event.preventDefault();
