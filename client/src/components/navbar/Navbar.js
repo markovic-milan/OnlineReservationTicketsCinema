@@ -5,7 +5,6 @@ import './Navbar.css';
 const Navbar = (props) => {
 
         window.onclick = (event)=>{
-        console.log(event.srcElement);
         if(!(event.srcElement.className === 'hamburger' || event.srcElement.parentElement.className === 'hamburger') && 
         document.getElementsByClassName("dropdown-container")[0].style.display === 'block'){
             console.log("Zatvori");

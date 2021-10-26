@@ -116,6 +116,13 @@
 
 .grid-container {
   margin-top: 4rem;
+  /* display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-gap: 10px;
+  justify-content: center; */
+}
+
+.grid-container-inner{
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   grid-gap: 10px;
@@ -123,8 +130,8 @@
 }
 
 .grid-item {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 1px solid black;
   text-align: center;
   border-radius: 10px;

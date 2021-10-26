@@ -48,20 +48,20 @@
 },
 {
     "id": 5,
-    "orginalniNaslov": " Space Dogs: Tropical Adventure",
+    "orginalniNaslov": "Space Dogs: Tropical Adventure",
     "reziser": "Inna Evlannikova",
     "glumci": "lint Eastwood, Dwight Yoakam, Fernanda Urrejola, Eduardo Minett",
     "datumPremijere": "23 sep, 2021",
     "trajanjeFilma": "91 min",
-    "termini": " 15:15, 11:30, 13:30",
-    "zanr": "  Avantura",
+    "termini": "15:15, 11:30, 13:30",
+    "zanr": "Avantura",
     "sadrzajFilma": "Kada se u tropskim krajevima Atlantskog okeana pojavi misteriozni i opasni vrtložni fenomen, Belka i Strelka, prvi astronauti na povratku iz misije na Saturn, su poslati da istraže ovu čudnu pojavu.Dok se upuštaju u okeanske dubine, otkrivaju misteriozni NLO koji pokušava da ukrade svu Zemljinu vodu. Uz pomoć svojih dobrih prijatelja, Belka i Strelka još jednom izvršavaju herojsku misiju spašavanja planete i dalekog doma svojih novih vanzemaljskih prijatelja.",
     "slika": "/images/psi.jpg"
 },
 
 {
     "id": 6,
-    "orginalniNaslov": "  Space Jam: A New Legacy",
+    "orginalniNaslov": "Space Jam: A New Legacy",
     "reziser": "Malcolm D. Lee",
     "glumci": "LeBron James, Don Cheadle, Khris Davis, Sonequa Martin-Green, Cedric Joe",
     "datumPremijere": "14 jul, 2021",

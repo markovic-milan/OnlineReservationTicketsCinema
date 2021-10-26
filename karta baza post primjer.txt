@@ -6,6 +6,14 @@
 }
 putanja : http://localhost:3001/karte
 
+{
+	"date":"30 okt, 2021",
+	"time":"16:30",
+	"racun":"123568569856",
+	"seat-numbers":"2",
+	"filmId":""
+}
+
 ================================
 vidjeti karte korisnika sa id=1
 

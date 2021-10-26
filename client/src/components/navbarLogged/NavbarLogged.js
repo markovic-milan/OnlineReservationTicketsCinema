@@ -12,7 +12,6 @@ import Modal from "../modal/modal";
 
 const NavbarLogged = (props) => {
   window.onclick = (event) => {
-    console.log(event.srcElement);
     if (
       !(
         event.srcElement.className === "hamburger" ||
@@ -151,7 +150,7 @@ const NavbarLogged = (props) => {
               <a className="dropdown">
                 <a>{korisnicko_ime}</a>
                 <div className="dropdown-content">
-                  <a href="#">Rezervacije</a>
+                  {/* <a href="#">Rezervacije</a> */}
                   <a onClick={promjenaLozinke}>Promjena lozinke</a>
                   <a onClick={submit}>Obriši nalog</a>
                 </div>

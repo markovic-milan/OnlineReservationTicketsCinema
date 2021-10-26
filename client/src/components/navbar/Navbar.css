@@ -14,7 +14,7 @@
 }
 
 .filler2 {
-    flex-grow: 4;
+    flex-grow: 3;
 }
 
 .logo-container {
@@ -124,13 +124,13 @@ li:hover>a {
     cursor: pointer;
 }
 
-@media all and (max-width: 680px) {
+@media all and (max-width: 800px) {
     .link-container ul {
         display: none;
     }
 }
 
-@media all and (min-width: 681px) {
+@media all and (min-width: 801px) {
     .hamburger {
         display: none;
     }

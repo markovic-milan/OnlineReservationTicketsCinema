@@ -8,7 +8,7 @@
 na putanju http://localhost:3001/kino
 
 ==============================================================================================
-ovo na onu putanju : http://localhost:3001/vrsteSjedista 
+ovo na onu putanju : http://localhost:3001/vrsteSjedista
 
 
 {

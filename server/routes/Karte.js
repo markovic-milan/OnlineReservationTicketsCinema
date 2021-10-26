@@ -28,9 +28,23 @@ router.get("/filmovi/:filmovi_id", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const karta = req.body;
-  await Karte.create(karta);
-  res.json(karta);
+  console.log(req.body);
+
+  const karta = {
+    datum:req.body.date,
+    termin:req.body.time,
+    sala:req.body.sala,
+    brojSjedista: req.body.brojSjedista,
+    FilmoviId:req.body.FilmoviId,
+    KorisniciId:req.body.KorisniciId,
+    ukupanIznos:'5'
+  }
+  const result = await Karte.create(karta);
+  if(result instanceof Karte){
+    res.json({rezervisano:true});}
+  else{
+    res.json({rezervisano:false});
+  }
 });
 
 module.exports = router;

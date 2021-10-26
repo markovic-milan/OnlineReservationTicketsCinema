@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./MovieInfo.css";
 import * as constants from "../../constants/constants";
 import axios from "axios";
+import Kino from "../kino/Kino";
 
 function MovieInfo(props) {
   console.log("MOVIE INFO" + props.movie);
   var reservation_container;
   var login_container;
-  const [sjediste, setSjedista] = useState([]);
   const [film, setFilm] = useState({ id: -1 });
 
   if (JSON.parse(localStorage.getItem(constants.ACCOUNT_KEY))) {
@@ -23,8 +23,6 @@ function MovieInfo(props) {
     login_container = "reservation-container-uskoro";
   }
 
-  const selectedSeats = [];
-  var sum = 0;
   const id = props.movie;
   useEffect(() => {
     if (id > 100) {
@@ -40,41 +38,35 @@ function MovieInfo(props) {
     }
   }, []);
 
-  useEffect(() => {
-    axios.get("http://localhost:3001/Sjedista/1").then((resp) => {
-      setSjedista(resp.data);
-    });
-  }, []);
 
-  const [karta, setKarte] = useState([]);
+  const { korisnik: korisnik } = JSON.parse(
+    localStorage.getItem(constants.ACCOUNT_KEY)
+  );
 
-  useEffect(() => {
-    axios.get(`http://localhost:3001/karte/filmovi/${id}`).then((resp) => {
-      setKarte(resp.data);
-    });
-  }, []);
-
-  const seatHandler = (event) => {
-    if (event.target.innerHTML === "X") {
-    } else {
-      if (event.target.style.background === "rgb(3, 255, 221)") {
-        event.target.style.background = "rgb(172, 255, 46)";
-        const index = selectedSeats.indexOf(event.target.innerHTML);
-        if (index > -1) {
-          selectedSeats.splice(index, 1);
-          sum -= 5;
-          document.getElementById("ukupno").innerHTML = sum + ".00 KM";
-        }
-      } else {
-        sum += 5;
-        event.target.style.background = "rgb(3, 255, 221)";
-        selectedSeats.push(event.target.innerHTML);
-        document.getElementById("ukupno").innerHTML = sum + ".00 KM";
+  function handleSubmit(event){
+    event.preventDefault();
+    
+    const data = new FormData(event.target);
+    const jsonData= {};
+    
+    data.forEach((value,key) => (jsonData[key] = value));
+    console.log(jsonData);
+    axios.post('http://localhost:3001/karte',jsonData).then((res)=> {
+      console.log(res.data);
+      if(res.data.rezervisano === true){
+        alert("Uspjesno ste rezervisali!");
+        window.location.reload();
+      }else{
+        alert("Niste rezervisali!");
+        window.location.reload();
       }
-      document.getElementById("seats-numbers").value = selectedSeats;
-    }
-  };
-  const isLoadedSeats = sjediste.length > 0;
+    });
+  }
+
+  function changeHandler(){
+      
+  }
+
   const isLoaded = film.id !== -1;
   return (
     <div className="movie-reservation-container">
@@ -106,44 +98,11 @@ function MovieInfo(props) {
             <div className="seats">
               <div className="screen">Izaberite sjediste</div>
               <div class="grid-container">
-                {isLoadedSeats ? (
-                  sjediste.map((sjediste) => {
-                    var brojac = 0;
-
-                    karta.forEach((karta) => {
-                      if (sjediste.broj === karta.brojSjedista) {
-                        brojac = 1;
-                        //console.log(terminFilma);
-                      }
-                    });
-
-                    //console.log(brojac);
-                    if (brojac) {
-                      return (
-                        <div className="grid-item zauzeto">
-                          <button onClick={seatHandler} className="zauzeto">
-                            X
-                          </button>
-                        </div>
-                      );
-                    } else
-                      return (
-                        <div className="grid-item slobodno">
-                          <button onClick={seatHandler}>{sjediste.id}</button>
-                        </div>
-                      );
-                  })
-                ) : (
-                  <span />
-                )}
+                <Kino movie={props.movie}/>
               </div>
             </div>
             <div className="reservation-form">
-              <form
-                action="http://localhost:3001/rezervacija"
-                method="post"
-                enctype="application/json"
-              >
+              <form onSubmit={handleSubmit}>
                 <label>Datum</label>
                 <select id="date" name="date">
                   <option value={film.datumPremijere}>
@@ -151,7 +110,7 @@ function MovieInfo(props) {
                   </option>
                 </select>
                 <label>Vrijeme</label>
-                <select id="time" name="time">
+                <select id="time" name="time" onChange={changeHandler}>
                   {id < 100 ? (
                     film.termini.split(",").map((ter) => {
                       return <option value={ter}>{ter}</option>;
@@ -168,17 +127,11 @@ function MovieInfo(props) {
                   maxLength="12"
                   minLength="12"
                 />
-                {/* <select id="sala" name="sala">
-                <option value="sala1">Sala1</option>
-                <option value="sala1">Sala2</option>
-                <option value="sala1">Sala3</option>
-                <option value="sala1">Sala4</option>
-              </select> */}
                 <label>Pozicije</label>
                 <input
                   type="text"
                   id="seats-numbers"
-                  name="seat-numbers"
+                  name="brojSjedista"
                   readOnly
                   className="input-seat"
                 ></input>
@@ -186,11 +139,13 @@ function MovieInfo(props) {
                   0.00 KM
                 </div>
                 <input
-                  type="submit"
+                  type='submit'
                   value="Potvrdi"
                   className="button-submit"
                 />
-                <input type="hidden" name="filmId" value={props.movie.id} />
+                <input type="hidden" name="FilmoviId" value={id} />
+                <input type="hidden" name="KorisniciId" value={korisnik.id} />
+                <input type="hidden" name="sala" value='1' />
               </form>
             </div>
           </div>
