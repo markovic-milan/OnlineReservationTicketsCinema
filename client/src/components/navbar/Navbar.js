@@ -39,6 +39,7 @@ const Navbar = () => {
                         <li><a href="/prijava"> Prijava</a></li>
                         <li><a href="/registracija">Registracija</a></li>
                         <li><a href="/sale">Sale</a></li>
+                        
                     </ul>
                 </div>
             </div>    

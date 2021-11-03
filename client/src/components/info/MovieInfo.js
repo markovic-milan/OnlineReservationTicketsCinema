@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./MovieInfo.css";
 import * as constants from "../../constants/constants";
 import axios from "axios";
-import Registracija from "../../screens/Registracija";
+import { Link } from "react-router-dom";
 
 function MovieInfo(props) {
   console.log("MOVIE INFO" + props.movie);
