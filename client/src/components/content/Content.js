@@ -1,31 +1,25 @@
 import React,{useState, useEffect} from "react";
 import "./Content.css";
-import axios from 'axios';
 import Slideshow from "../slideshow/Slideshow";
 import Flickity from 'flickity';
 
-const Content = () => {
-    const [filmovi,setFilmovi] = useState([]);
+const Content = (props) => {
   useEffect(()=>{
-    axios.get('http://localhost:3001/filmovi').then((resp)=>{
-      setFilmovi(resp.data);
-      console.log("CONTENT:" + filmovi);
       var elem = document.querySelector('.carousel');
       var flkty = new Flickity( elem, {
         // options
         cellAlign: 'left',
+        freeScrollFriction: 0.03,
         contain: true,
-        freeScroll: true,
+        freeScroll: false,
         lazyLoad: 3
-      });  
-    });
-  },[])
-
-const isLoaded = filmovi.length > 0;
+      });
+    },[]);
+  
 
     return <div>
             <div className="movies-container">
-              {isLoaded ?  <Slideshow movies={filmovi} selected/> : <p>Loading...</p>}
+              <Slideshow movies={props.filmovi} selected/>
             </div>                
     </div>
 }

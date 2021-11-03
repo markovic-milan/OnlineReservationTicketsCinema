@@ -22,11 +22,14 @@ module.exports = (sequelize, DataTypes) => {
 
          }
         
-    },{
-        timestamps: true,
-        paranoid: true,
-        timestamps: true,
-    });
+
+    })
+
+    Korisnici.associate = (models)=>{
+        Korisnici.hasMany(models.Karte, {
+            onDelete: "cascade",
+        });
+    };
 
     return Korisnici;
 };

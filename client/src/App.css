@@ -37,3 +37,7 @@ html, body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+.nevidljiv{
+  display: none;
+}

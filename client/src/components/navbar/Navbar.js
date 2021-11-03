@@ -1,11 +1,26 @@
 import React from "react";
 import SearchBar from "../searchbar/SearchBar";
 import './Navbar.css';
-import { useState } from 'react';
-const Navbar = () => {
 
+const Navbar = (props) => {
 
+        window.onclick = (event)=>{
+        if(!(event.srcElement.className === 'hamburger' || event.srcElement.parentElement.className === 'hamburger') && 
+        document.getElementsByClassName("dropdown-container")[0].style.display === 'block'){
+            console.log("Zatvori");
+            document.getElementsByClassName("dropdown-container")[0].style.display='none';
+        }
+    };
 
+    function myfunc()
+    {
+        if(document.getElementsByClassName("dropdown-container")[0].style.display === 'block'){
+            document.getElementsByClassName("dropdown-container")[0].style.display='none';
+        }else{
+            var cont = document.getElementsByClassName("dropdown-container")[0];
+            cont.style.display = "block";
+        }
+    }
     const MojStil = {
         stroke: 'rgb(167, 163, 204)', 
         fill: 'rgb(100, 100, 100)',
@@ -30,8 +45,9 @@ const Navbar = () => {
                     </g>
                 </svg>
                 </div>
+                <p className="naziv">SmartCinema</p>
                 <div className="filler1"></div>
-                <SearchBar />  
+                <SearchBar updateData={props.updateData}/>  
                 <div className="filler2"></div>
                 <div className="link-container">
                     <ul>
@@ -41,8 +57,19 @@ const Navbar = () => {
                         <li><a href="/sale">Sale</a></li>
                         
                     </ul>
+               <button onClick={myfunc} class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>    
+            <div className="dropdown-container">
+                <div><a href="/pocetna">Početna</a></div>
+                <div><a href="/prijava">Prijava</a></div>
+                <div><a href="/registracija">Registracija</a></div>
+                <div><a href="/sale">Sale</a></div>
+            </div>
     </nav>
 }
 

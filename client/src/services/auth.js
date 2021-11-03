@@ -41,6 +41,10 @@ const AuthService = {
         localStorage.clear();
     },
 
+    changePassword: async (oldPassword, newPassword) => {
+        await axios.put(`${constants.BASE_URL}/korisnici/promjena-lozinke/${getUser().id}`, {lozinka: newPassword, staraLozinka: oldPassword}, authConfig());
+    },
+
     setAccount: (account) => localStorage.setItem(constants.ACCOUNT_KEY, JSON.stringify(account)),
 
     logOut: async () => {

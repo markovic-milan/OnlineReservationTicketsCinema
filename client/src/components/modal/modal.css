@@ -1,0 +1,44 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .modal-form-container {
+      width: 20rem !important;
+  }
+
+  .modal-form {
+      display: flex;
+      align-items: center;
+  }
+
+  .save-button {
+      margin-right: 1rem;
+  }
+
+  .modal-field {
+      width: 100% !important;
+  }
+  
+  .modal-main {
+    border-radius: 4px;
+    position:fixed;
+    background: white;
+    width: 20rem;
+    height: 20rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }

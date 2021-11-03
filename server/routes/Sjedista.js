@@ -5,6 +5,7 @@ const { Sjedista } = require("../models");
 
 router.get("/:SaleId", async (req, res) => {
     const SaleId = req.params.SaleId;
+    console.log(req.params);
     const sjedista = await Sjedista.findAll({ where: {
         SaleId: SaleId
     }});
